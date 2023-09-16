@@ -1,3 +1,11 @@
+# Gnostr-org Gnostr-org
+
+## How do I install these formulae?
+
+`brew install gnostr-org/gnostr-org/<formula>`
+
+Or `brew tap gnostr-org/gnostr-org` and then `brew install <formula>`.
+
 # Homebrew Tap for Nostr
 
 This is a [homebrew tap](https://docs.brew.sh/Taps) for [nostr](https://nostr.com/) software, such as [gossip](https://github.com/mikedilger/gossip).
