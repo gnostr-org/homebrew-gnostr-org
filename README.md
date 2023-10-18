@@ -9,6 +9,16 @@
 
 ---
 
+## clone and tap locally
+ 
+```
+git clone https://github.com/gnostr-org/homebrew-gnostr.git && cd homebrew-gnostr-org && brew tap --custom-remote gnostr-org/homebrew-gnostr-org .
+
+```
+```
+git clone git@github.com:gnostr-org/homebrew-gnostr.git && cd homebrew-gnostr-org && brew tap --custom-remote gnostr-org/homebrew-gnostr-org .
+```
+
 ##### This is a [homebrew tap](https://docs.brew.sh/Taps) for [gnostr.org](https://gnostr.org/) - a git+nostr workflow utility
 
 ### [gnostr](https://github.com/gnostr-org/gnostr) - a git+nostr workflow utility
