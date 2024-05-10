@@ -1,11 +1,11 @@
 class Gnostrd < Formula
   desc "git+nostr workflow utility"
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.27"
+  version "0.0.28"
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.27/gnostrd-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "2a84d65279543ceb942859d192426a960af27970175a105840f4bd5106f64615"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.28/gnostrd-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "9f590dafc6a02e726fca710660e849243af50dd4f138798540af56fce09b6b13"
     end
   end
   license "Apache-2.0"
