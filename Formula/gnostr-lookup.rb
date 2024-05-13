@@ -1,16 +1,20 @@
 class GnostrLookup < Formula
   desc "git+nostr workflow utility"
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.28"
+  version "0.0.30"
+  if OS.mac?
+    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.30/gnostr-lookup-x86_64-apple-darwin.tar.gz"
+    sha256 "5a0427c6a06edeaf3cbb66646c30651242d53b881661b1a8ef6acda0e109d7a0"
+  end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.28/gnostr-lookup-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "856cd05b02330595b6969b5dafe89404c21448555c96770202310243905e8df7"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.30/gnostr-lookup-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "a650f1a68f661931e20c8d0ae6ad5b7a34b76e37341a93c896b4a9f1a0cd10c9"
     end
   end
   license "Apache-2.0"
 
-  BINARY_ALIASES = {"x86_64-unknown-linux-gnu": {}}
+  BINARY_ALIASES = {"aarch64-apple-darwin": {}, "x86_64-apple-darwin": {}, "x86_64-unknown-linux-gnu": {}}
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
@@ -28,6 +32,12 @@ class GnostrLookup < Formula
   end
 
   def install
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "gnostr-lookup"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "gnostr-lookup"
+    end
     if OS.linux? && Hardware::CPU.intel?
       bin.install "gnostr-lookup"
     end
