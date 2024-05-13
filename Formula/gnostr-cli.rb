@@ -1,23 +1,18 @@
 class GnostrCli < Formula
   desc "git+nostr workflow utility"
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.31"
+  version "0.0.32"
   if OS.mac?
-    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.31/gnostr-cli-x86_64-apple-darwin.tar.gz"
-    sha256 "7909fb4bf96eb59b3eb2b9f905a1ced4b4470828eecb9964b586ef4cd5cbe3ed"
+    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.32/gnostr-cli-x86_64-apple-darwin.tar.gz"
+    sha256 "f4039c3b554387cf8cbacda3574f85dd3a96b7ed20c3aa357e65dc6be4d9107e"
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.31/gnostr-cli-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "9e2c3e111e2e5ad07619182aef282549ead3d76f6399c1c59d9c21148ed5b6c1"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.32/gnostr-cli-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "6043a60317f205d5e8eacfe6aa8a420c4f597a7b930f3454e0e3482ddd011513"
     end
   end
   license "Apache-2.0"
-  
-  depends_on "openssl@3"
-  depends_on "openssl@3"
-  depends_on "openssl@3"
-  depends_on "openssl@3"
 
   BINARY_ALIASES = {"aarch64-apple-darwin": {}, "x86_64-apple-darwin": {}, "x86_64-unknown-linux-gnu": {}}
 
