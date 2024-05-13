@@ -1,16 +1,20 @@
 class Gnostrd < Formula
   desc "git+nostr workflow utility"
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.28"
+  version "0.0.30"
+  if OS.mac?
+    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.30/gnostrd-x86_64-apple-darwin.tar.gz"
+    sha256 "95577f57e65b7c07a206b6f1eef933b3f383c02bc351d69bee898ca579d4cd8c"
+  end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.28/gnostrd-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "9f590dafc6a02e726fca710660e849243af50dd4f138798540af56fce09b6b13"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.30/gnostrd-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "0a2456bc2da2229669a7464734506172211a22f4edc84e40cb7ff2345803f36d"
     end
   end
   license "Apache-2.0"
 
-  BINARY_ALIASES = {"x86_64-unknown-linux-gnu": {}}
+  BINARY_ALIASES = {"aarch64-apple-darwin": {}, "x86_64-apple-darwin": {}, "x86_64-unknown-linux-gnu": {}}
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
@@ -28,6 +32,12 @@ class Gnostrd < Formula
   end
 
   def install
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "gnostr--d", "gnostr-chat", "gnostr-d", "gnostrd"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "gnostr--d", "gnostr-chat", "gnostr-d", "gnostrd"
+    end
     if OS.linux? && Hardware::CPU.intel?
       bin.install "gnostr--d", "gnostr-chat", "gnostr-d", "gnostrd"
     end
