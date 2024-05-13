@@ -1,23 +1,18 @@
 class JjCli < Formula
   desc "gnostr: a git+nostr workflow utility."
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.31"
+  version "0.0.32"
   if OS.mac?
-    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.31/jj-cli-x86_64-apple-darwin.tar.gz"
-    sha256 "d248cdd7402de0b066297c064a1b34be7f22d769593ec23bc6ce929f121bd971"
+    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.32/jj-cli-x86_64-apple-darwin.tar.gz"
+    sha256 "ad1d68c92f63324121a13272d16619a4ab3a50fb4975cd7f4fc46b65bfe1323d"
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.31/jj-cli-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "df11bbb324f65e495394be85c5a8c5de3eddf3e52f93a73d82798978d626a4d6"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.32/jj-cli-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "a6cf3b1d09f347cf3f7a155269958e94d731acdf0f62dd6a31bfe91f11a2705a"
     end
   end
   license "Apache-2.0"
-  
-  depends_on "openssl@3"
-  depends_on "openssl@3"
-  depends_on "openssl@3"
-  depends_on "openssl@3"
 
   BINARY_ALIASES = {"aarch64-apple-darwin": {}, "x86_64-apple-darwin": {}, "x86_64-unknown-linux-gnu": {}}
 
