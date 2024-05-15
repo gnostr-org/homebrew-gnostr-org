@@ -1,15 +1,15 @@
 class Gnostrd < Formula
   desc "git+nostr workflow utility"
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.34"
+  version "0.0.35"
   if OS.mac?
-    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.34/gnostrd-x86_64-apple-darwin.tar.gz"
-    sha256 "869ce3cf509f2ffe0409594fee19aaaaf1ab071c25ac46d0bb486becfe67b01c"
+    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.35/gnostrd-x86_64-apple-darwin.tar.gz"
+    sha256 "929b133db2b62a95206cec706a17276f57f3e6df0a8ab790e5f2bf6e9a2974ec"
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.34/gnostrd-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "83c675ee62ff66b34b52488a2ee0313c919d265cead9ed4b88175769b6634fda"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.35/gnostrd-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "eff4c8e205b2c7e12f0af8b763b93084b0a75681fda617eac5d53ca13cfcb2fd"
     end
   end
   license "Apache-2.0"
