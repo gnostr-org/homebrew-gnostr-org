@@ -4,12 +4,12 @@ class GnostrGui < Formula
   version "0.0.36"
   if OS.mac?
     url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.36/gnostr-gui-x86_64-apple-darwin.tar.gz"
-    sha256 "874fa5ef1f188f17c84c5608051462cd30b85ef6eb9a53f0491295d5e1731853"
+    sha256 "8e474cb7509b81199dc81c8daaa29079a8edcb96f581ccdad154da2452ef2712"
   end
   if OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.36/gnostr-gui-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "398f3fa97110c795de9a74ad4c7739e514467aa5fbc1a5697e88d08e500faf94"
+      sha256 "1a299015731cef43ecc23cbf266afea789c6ff48de27f90be18ef1ccd6a7a08c"
     end
   end
   license "Apache-2.0"
