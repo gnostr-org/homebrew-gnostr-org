@@ -4,12 +4,12 @@ class GnostrCli < Formula
   version "0.0.36"
   if OS.mac?
     url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.36/gnostr-cli-x86_64-apple-darwin.tar.gz"
-    sha256 "a33b85e98700ecf6f2518c81d1b00a3b02076e0d46c72f49c8a3b5fa32384334"
+    sha256 "c1901387c651059ddb226c15b5b70ac040fb52080e86250c8a7ee12257d88530"
   end
   if OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.36/gnostr-cli-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "a7282708fa0e113fbc819897ab39f2e7bcf2efbcf6487f56fef30f98001cc224"
+      sha256 "3ca334c3e24e9a4fee4bbf916ecb367282236e5a0ab0f6c48772e6383e9bd9cc"
     end
   end
   license "Apache-2.0"
