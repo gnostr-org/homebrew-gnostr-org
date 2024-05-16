@@ -4,12 +4,12 @@ class GnostrBins < Formula
   version "0.0.36"
   if OS.mac?
     url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.36/gnostr-bins-x86_64-apple-darwin.tar.gz"
-    sha256 "72b83c55a6d5d2a16f4f9d2b47e6f46adb3931a3e2270aca780e23fc3858ebc6"
+    sha256 "b3061a84445fa03a5915689c5905ba267bb060e6ef87c2c3c9442d9fdeef585c"
   end
   if OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.36/gnostr-bins-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "1c8be4a715e0c541e7d73c41b9a9677174a166f735e1ce19ca25d6eae191fb2c"
+      sha256 "31489dacd8853393479237ff3056dcafee779c802594a925e1ac583d4e9dba35"
     end
   end
   license "Apache-2.0"
