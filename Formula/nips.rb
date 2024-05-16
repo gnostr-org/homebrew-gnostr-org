@@ -4,12 +4,12 @@ class Nips < Formula
   version "0.0.36"
   if OS.mac?
     url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.36/nips-x86_64-apple-darwin.tar.gz"
-    sha256 "f8d7681867223060b014c6166e5cd093418118f322500f429083a92bcc2ca135"
+    sha256 "8d74307e403c1d50b902709a08ac08635445ba82ef7f06a56ad650b15e87480e"
   end
   if OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.36/nips-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "7f87f237fa013167b4bcee03204f4e259d4db7460c41219ac9f3b73642214a65"
+      sha256 "33d8c63a9c5374f0f8705731f0e711c9af7e2e1e6d09f5a227d13671f7d1265f"
     end
   end
   license "Apache-2.0"
