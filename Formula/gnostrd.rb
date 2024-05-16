@@ -4,12 +4,12 @@ class Gnostrd < Formula
   version "0.0.36"
   if OS.mac?
     url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.36/gnostrd-x86_64-apple-darwin.tar.gz"
-    sha256 "ff9d9ee8ccbc2c281ab110140384fa087b4cf7f67b4104f9ebc82b0b1c73feb5"
+    sha256 "fe8024c939168ca0b77850863bad68c4ca21f7e1e84f257ac7b8060f65f39aa3"
   end
   if OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.36/gnostrd-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "3e50ada02c110b0fdc46f2817faeff8ecd9d84aea4eec5c0095d0fa40940f7f0"
+      sha256 "e20b79d4e77d34d2a61ca83ed985de172a41fccc686e6dff80ddcc2f29f5f8ee"
     end
   end
   license "Apache-2.0"
