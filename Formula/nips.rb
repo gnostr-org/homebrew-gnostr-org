@@ -1,15 +1,15 @@
 class Nips < Formula
   desc "git+nostr workflow utility"
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.39"
+  version "0.0.40"
   if OS.mac?
-    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.39/nips-x86_64-apple-darwin.tar.gz"
-    sha256 "424793db792b51c3ead103d62de194abe36acde664f5ca0c4355c53a25b461ca"
+    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.40/nips-x86_64-apple-darwin.tar.gz"
+    sha256 "36a51bbd73fc573d237ae33f7ba3d31a6d95e003acddff43e19c629bae826905"
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.39/nips-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "f9d575246b1e093b698d9a40b6a48546051d4651a567d80c234697f964f0cd07"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.40/nips-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "15412ccf2a3d1aac7ecdc21158bceac150bc301f5413c190898d889b28754fbf"
     end
   end
   license "Apache-2.0"
