@@ -4,12 +4,12 @@ class GnostrLookup < Formula
   version "0.0.36"
   if OS.mac?
     url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.36/gnostr-lookup-x86_64-apple-darwin.tar.gz"
-    sha256 "9af1fcd4a29162f5886a9457795302d1b9c273d24d82c20f5c82248b91912d74"
+    sha256 "de947f2f3ee72f1fc49a3e8e555fd2e5f82627e79893eea8b5255b13e17ebf66"
   end
   if OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.36/gnostr-lookup-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "29d87040e4155df16a0ae1e2001f604e63a5e65a29722ce0cdc8f0ab8c31be1c"
+      sha256 "90db9ebd466cf0b0898b312d9858fd9e954e72eb15d438d566b96a692ce373d7"
     end
   end
   license "Apache-2.0"
