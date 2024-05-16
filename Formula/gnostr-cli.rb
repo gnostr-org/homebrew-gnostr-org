@@ -1,15 +1,15 @@
 class GnostrCli < Formula
   desc "git+nostr workflow utility"
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.39"
+  version "0.0.40"
   if OS.mac?
-    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.39/gnostr-cli-x86_64-apple-darwin.tar.gz"
-    sha256 "c372bc5de6db13817f471894f078fb1f0ec22e78b1c79a8b95328e6d72f9d672"
+    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.40/gnostr-cli-x86_64-apple-darwin.tar.gz"
+    sha256 "adb34dc57adf18223252c000d898cce309dd16919b60d8fbac40813f5806b8d5"
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.39/gnostr-cli-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "72b7cf4e858d38037b0d20006671f853fb8afec26d675d1ed69f8624b15b10ec"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.40/gnostr-cli-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "a4421ce0a47329d35702f65194341ccbb010347d54fc9f530190592e33de1f26"
     end
   end
   license "Apache-2.0"
