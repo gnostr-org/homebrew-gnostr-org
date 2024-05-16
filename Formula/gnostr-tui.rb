@@ -4,12 +4,12 @@ class GnostrTui < Formula
   version "0.0.36"
   if OS.mac?
     url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.36/gnostr-tui-x86_64-apple-darwin.tar.gz"
-    sha256 "49e6a348f507ff50c4146195ecc2ddca5c9117cd078dcb50edbf85ec77ec0bf5"
+    sha256 "59112f36a9661ea800aed6f6e2515ee3b89e459697c4f4e3e0d49b2f68454625"
   end
   if OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.36/gnostr-tui-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "fce16847941b830687d3bb92d67cdc08216deb07e9ddb3bf79762d872b71c25e"
+      sha256 "ca0ad70ba80c350eb89feaa348e93a9f0aa26de26e9fc008c562104097f67530"
     end
   end
   license "Apache-2.0"
