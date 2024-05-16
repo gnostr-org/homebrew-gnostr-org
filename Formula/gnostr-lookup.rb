@@ -1,15 +1,15 @@
 class GnostrLookup < Formula
   desc "git+nostr workflow utility"
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.39"
+  version "0.0.40"
   if OS.mac?
-    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.39/gnostr-lookup-x86_64-apple-darwin.tar.gz"
-    sha256 "4631fddf0d3f0caef4c27f326f6012ee631f9e922bde13388b91a394a955635a"
+    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.40/gnostr-lookup-x86_64-apple-darwin.tar.gz"
+    sha256 "6c1372e4ccace5904742c0e885203e337fa23235ba9c8e1a523c1a002627c769"
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.39/gnostr-lookup-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "ebf507f3695a8804dfbb355b6151148f326091ac9898f55d7ed665b1c01ee06d"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.40/gnostr-lookup-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "0206976105115a6477ff9a8ff5a141cca20ee55112df9ac284b197fad7205ec4"
     end
   end
   license "Apache-2.0"
