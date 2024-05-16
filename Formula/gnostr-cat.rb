@@ -1,15 +1,15 @@
 class GnostrCat < Formula
   desc "Command-line client for web sockets, like netcat/curl/socat for ws://."
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.39"
+  version "0.0.40"
   if OS.mac?
-    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.39/gnostr-cat-x86_64-apple-darwin.tar.gz"
-    sha256 "bbfed59f8a4f1c5e4f78721701c1898a9b93e45bc174906bab37c76ff8df503f"
+    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.40/gnostr-cat-x86_64-apple-darwin.tar.gz"
+    sha256 "a54c37b0daccc1f8c1b39543fea0e4a07f86840988d545153453a86c6866ead8"
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.39/gnostr-cat-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "53f4f776d1540c4390417a4cd835a7fe41456a0b3896d3bfee927700e86da2d8"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.40/gnostr-cat-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "bf16903cea2305e7a484817e0089c64ecc312487ebed7e1a81a15ea9ab66df30"
     end
   end
   license "Apache-2.0"
