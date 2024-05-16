@@ -1,15 +1,15 @@
 class GnostrTui < Formula
   desc "blazing fast terminal-ui for git"
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.37"
+  version "0.0.38"
   if OS.mac?
-    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.37/gnostr-tui-x86_64-apple-darwin.tar.gz"
-    sha256 "9d5af03dc059429a851a2de665e8931a8b9ab33465c62d9f8cb7d7f2688cfd86"
+    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.38/gnostr-tui-x86_64-apple-darwin.tar.gz"
+    sha256 "3ad1e9062f0634be10014cd38b02492f28f47c2a740b081c3a720ab7dae3ae6e"
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.37/gnostr-tui-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "5ad9f43e272912b113e7dccf972f3757f642e1fe48beea6a0de67c09fc491b8d"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.38/gnostr-tui-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "2d977b20ad81d9b6501048fc14b8f1b3331e5a3f38319d3815065b89a8aba27f"
     end
   end
   license "Apache-2.0"
