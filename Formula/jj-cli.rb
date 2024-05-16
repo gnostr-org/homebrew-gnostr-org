@@ -1,15 +1,15 @@
 class JjCli < Formula
   desc "gnostr: a git+nostr workflow utility."
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.39"
+  version "0.0.40"
   if OS.mac?
-    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.39/jj-cli-x86_64-apple-darwin.tar.gz"
-    sha256 "6fcee384bde6f0f437cbc6ecd44e4965f7f516cb8cbdafde3529f8169a071499"
+    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.40/jj-cli-x86_64-apple-darwin.tar.gz"
+    sha256 "877497dffc46e634dbff3461a5cdc1688e4dd474c6660674273aceae85070806"
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.39/jj-cli-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "023b5aec11b3228738de9eaf17a594ba8b64868bf58c502578e9a84e0d89aa87"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.40/jj-cli-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "17099f05e2e97bea2c88e7c6c1a5ebfcfe2eb2c6cc74134f56e873103af6a2eb"
     end
   end
   license "Apache-2.0"
@@ -33,13 +33,13 @@ class JjCli < Formula
 
   def install
     if OS.mac? && Hardware::CPU.arm?
-      bin.install "fake-diff-editor", "fake-editor", "gnostr", "gnostr-jj", "gnostr-jj-gui", "jj"
+      bin.install "fake-diff-editor", "fake-editor", "git-gnostr", "git-gnostr-gui", "git-gnostr-jj", "gnostr", "gnostr-gui", "jj"
     end
     if OS.mac? && Hardware::CPU.intel?
-      bin.install "fake-diff-editor", "fake-editor", "gnostr", "gnostr-jj", "gnostr-jj-gui", "jj"
+      bin.install "fake-diff-editor", "fake-editor", "git-gnostr", "git-gnostr-gui", "git-gnostr-jj", "gnostr", "gnostr-gui", "jj"
     end
     if OS.linux? && Hardware::CPU.intel?
-      bin.install "fake-diff-editor", "fake-editor", "gnostr", "gnostr-jj", "gnostr-jj-gui", "jj"
+      bin.install "fake-diff-editor", "fake-editor", "git-gnostr", "git-gnostr-gui", "git-gnostr-jj", "gnostr", "gnostr-gui", "jj"
     end
 
     install_binary_aliases!
