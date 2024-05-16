@@ -1,15 +1,15 @@
 class GnostrGui < Formula
   desc "git+nostr workflow utility"
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.39"
+  version "0.0.40"
   if OS.mac?
-    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.39/gnostr-gui-x86_64-apple-darwin.tar.gz"
-    sha256 "e0d5c910838b9ac0f4b91c43a9391a512e85871125312213f5880390fd49968b"
+    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.40/gnostr-gui-x86_64-apple-darwin.tar.gz"
+    sha256 "ddc42a769cdd79acbd45d6d9a4f70c415314b2b670df76828a3cff6a9f9e19ca"
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.39/gnostr-gui-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "342a565c2f16b8fc50e6fd1dcff9cc875c8ef2c0b91928c08cdd18c15b75fd6b"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.40/gnostr-gui-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "6650a507e38b37939a26e9ee5f625e4747554f6b53ed4c52ce7789af8f32307e"
     end
   end
   license "Apache-2.0"
