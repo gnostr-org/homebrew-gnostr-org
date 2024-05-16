@@ -4,12 +4,12 @@ class JjCli < Formula
   version "0.0.36"
   if OS.mac?
     url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.36/jj-cli-x86_64-apple-darwin.tar.gz"
-    sha256 "94e1f015d3797e656264afbc8253584d1db5fcb4d1ff3c52840f98a8539fa648"
+    sha256 "a61f21ff15fc17abc151bf639cfe2662f235bead9954521fcbd828a56637e193"
   end
   if OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.36/jj-cli-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "aa66ca6524789d8baab49b1acfe64f68df6130ce01b01feb08a8ee746bc86903"
+      sha256 "081df70dd37f243dcf30fb2f118333c2601411e0245f5ce12236832005f12bc3"
     end
   end
   license "Apache-2.0"
