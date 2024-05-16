@@ -1,15 +1,15 @@
 class JjCli < Formula
   desc "gnostr: a git+nostr workflow utility."
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.38"
+  version "0.0.39"
   if OS.mac?
-    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.38/jj-cli-x86_64-apple-darwin.tar.gz"
-    sha256 "4a7ea51e2a17ef17fbb58cefa1d76e70cada54b5a039d0051eb75c5dfd1166b4"
+    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.39/jj-cli-x86_64-apple-darwin.tar.gz"
+    sha256 "6fcee384bde6f0f437cbc6ecd44e4965f7f516cb8cbdafde3529f8169a071499"
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.38/jj-cli-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "67263292a86651695ef924eb7da70b64653cdc7a714d6140ea11f5636b77fdfa"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.39/jj-cli-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "023b5aec11b3228738de9eaf17a594ba8b64868bf58c502578e9a84e0d89aa87"
     end
   end
   license "Apache-2.0"
