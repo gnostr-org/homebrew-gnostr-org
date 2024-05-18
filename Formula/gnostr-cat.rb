@@ -1,21 +1,21 @@
 class GnostrCat < Formula
   desc "Command-line client for web sockets, like netcat/curl/socat for ws://."
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.41"
+  version "0.0.42"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.41/gnostr-cat-aarch64-apple-darwin.tar.gz"
-      sha256 "a07f384f536075d11e324f0b5bd20155998fc526d980630cfab1053ef1062c93"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.42/gnostr-cat-aarch64-apple-darwin.tar.gz"
+      sha256 "5e4de8989a888dfcd0c75ec8d30cce95cd02077f13dded0301e021529063b6af"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.41/gnostr-cat-x86_64-apple-darwin.tar.gz"
-      sha256 "4b03989a425de9a13d50eb799623582e305eaef84349405470831710dcfca921"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.42/gnostr-cat-x86_64-apple-darwin.tar.gz"
+      sha256 "860d80471fcf187256ed00385dc9fc47d9e6b6216b1affbdc2e65c5ee833033f"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.41/gnostr-cat-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "12eb2e5050180864bb2335544b01f32b926d2189640a3e42bd5e37fa518fad89"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.42/gnostr-cat-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "63da36299b4ac533bac201ab8ea53f905bec2df8c33fb7f64613d20a091ade6b"
     end
   end
   license "Apache-2.0"
