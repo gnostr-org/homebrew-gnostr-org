@@ -1,21 +1,21 @@
 class GnostrTui < Formula
   desc "blazing fast terminal-ui for git"
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.41"
+  version "0.0.42"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.41/gnostr-tui-aarch64-apple-darwin.tar.gz"
-      sha256 "7252f916b680d1ef37324e113842167fbcbd4812ff401e615280f6f853951f64"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.42/gnostr-tui-aarch64-apple-darwin.tar.gz"
+      sha256 "1912d7e66d041eb2bb365480d652d46e64b1ae76c5162bd06c247f0b4035819c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.41/gnostr-tui-x86_64-apple-darwin.tar.gz"
-      sha256 "782bd02e5bdc09df762d1f7d6c168ef65a34d6a4bd06fac411745175a7247295"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.42/gnostr-tui-x86_64-apple-darwin.tar.gz"
+      sha256 "5601747f63ac20b580bb7bb710cf1809215a85d5cb7a42f2d99a4432572975e1"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.41/gnostr-tui-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "c1bec73851bdf0a159c2b6b54c074ac3c7a5558b79cfb2375ed28815a2de14bc"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.42/gnostr-tui-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "9d8371c652cd48c375cca54eb36266ea88a841c63a9904c2cf087139beec7c63"
     end
   end
   license "Apache-2.0"
@@ -39,13 +39,13 @@ class GnostrTui < Formula
 
   def install
     if OS.mac? && Hardware::CPU.arm?
-      bin.install "git-tui"
+      bin.install "git-tui", "gnostr-tui"
     end
     if OS.mac? && Hardware::CPU.intel?
-      bin.install "git-tui"
+      bin.install "git-tui", "gnostr-tui"
     end
     if OS.linux? && Hardware::CPU.intel?
-      bin.install "git-tui"
+      bin.install "git-tui", "gnostr-tui"
     end
 
     install_binary_aliases!
