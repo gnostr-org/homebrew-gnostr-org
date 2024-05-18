@@ -1,21 +1,21 @@
 class GnostrGui < Formula
   desc "git+nostr workflow utility"
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.42"
+  version "0.0.43"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.42/gnostr-gui-aarch64-apple-darwin.tar.gz"
-      sha256 "e96c46f701dd434b407ddf8e305202d9ce75eaea62a5152eaa369d8751bc39a2"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.43/gnostr-gui-aarch64-apple-darwin.tar.gz"
+      sha256 "f33268177834bd22a3302920adda427be2a3781c66b61c0493b0dbaa078de9eb"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.42/gnostr-gui-x86_64-apple-darwin.tar.gz"
-      sha256 "87e4ec09d859ab3d2a983a3c45e4be51b9dc94c7e4a49d0d67de1e3c59a1420f"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.43/gnostr-gui-x86_64-apple-darwin.tar.gz"
+      sha256 "46929b0d1bda5147de07d5e467cd5cc8bebf9860b95d8634b69d24c1449da01d"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.42/gnostr-gui-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "26d957c51178f02b661facb13578c26fb2772a43a180e414ae96dca15de1d12d"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.43/gnostr-gui-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "845a23ee9bbee9e73fb77dc571e3a76811bba3c318676194a00cdc0dbdfbd65b"
     end
   end
   license "Apache-2.0"
