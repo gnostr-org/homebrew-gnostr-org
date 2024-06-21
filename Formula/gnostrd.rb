@@ -1,21 +1,21 @@
 class Gnostrd < Formula
   desc "git+nostr workflow utility"
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.43"
+  version "0.0.44"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.43/gnostrd-aarch64-apple-darwin.tar.gz"
-      sha256 "36e3b96738208583457fc6fb67b950a61d9a107537adcf38a0cface66015f4ab"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.44/gnostrd-aarch64-apple-darwin.tar.gz"
+      sha256 "287ff6a18eb0e6d8c035ede9b85198eff8ca82634a3c3435fdb4af4bf84caaac"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.43/gnostrd-x86_64-apple-darwin.tar.gz"
-      sha256 "9fef450fd1ff05be6f4e42d0a94bd3ef94a81ceb3b66bc79c1b71302d716a3b4"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.44/gnostrd-x86_64-apple-darwin.tar.gz"
+      sha256 "e87dbc43376b5c024de60682da7ec99d543f307be1c0171b8208cb38894cc147"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.43/gnostrd-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "e7353cd4051e88fdd637bc24ee01adb0e9db22cbfa6b7b57259cd857fb1a2be4"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.44/gnostrd-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "9df4b629304fe48297ce9413bbefe5a5701195f46f3a2465658f4bbc940e61a4"
     end
   end
   license "Apache-2.0"
