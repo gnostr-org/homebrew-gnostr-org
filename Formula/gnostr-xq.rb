@@ -1,21 +1,21 @@
 class GnostrXq < Formula
   desc "gnostr-xq:A reimplementation of jq."
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.43"
+  version "0.0.44"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.43/gnostr-xq-aarch64-apple-darwin.tar.gz"
-      sha256 "4fc335f40824e484f03caea5e78f75bfe66f172bcc143618c6123d2bfc86bf7a"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.44/gnostr-xq-aarch64-apple-darwin.tar.gz"
+      sha256 "e6fafcaebb2f96e8f928cbe3456ee554ec3bcbc4e491d9e64c8c1a4a062831de"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.43/gnostr-xq-x86_64-apple-darwin.tar.gz"
-      sha256 "719e5ccf6d89002241f386c4f3cca4171750f239949c988f32ddf4ce2d4a13d7"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.44/gnostr-xq-x86_64-apple-darwin.tar.gz"
+      sha256 "9b0f538de4509816770d6169ae76f3c7bb029a1a0c0925c906f01faefa3d3681"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.43/gnostr-xq-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "cdc0490a518ea4f66b4c6071fbb1e7905218e2241c771266b170e85ef02e158b"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.44/gnostr-xq-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "55444e7b77e7ecd755c074dcb2b9784487a4b4fffa0a4f63feec1816818d1cf7"
     end
   end
   license "Apache-2.0"
