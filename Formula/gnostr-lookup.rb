@@ -1,21 +1,21 @@
 class GnostrLookup < Formula
   desc "git+nostr workflow utility"
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.44"
+  version "0.0.45"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.44/gnostr-lookup-aarch64-apple-darwin.tar.gz"
-      sha256 "ca004f22cbf678e6f1d2afafd06cfe832800ee7e585bf501e55afd938ef16802"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.45/gnostr-lookup-aarch64-apple-darwin.tar.gz"
+      sha256 "d033f1b3f83799334bde41d26e1326554812f57b024d6815a0f106be6f2d2a80"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.44/gnostr-lookup-x86_64-apple-darwin.tar.gz"
-      sha256 "815dc60aa1f9f8130bb4a2c9002101d42bf05f252008fad6a2eab609e260938e"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.45/gnostr-lookup-x86_64-apple-darwin.tar.gz"
+      sha256 "868138d736bb192101e6efa9a56143ab48e1ad575ade94343593dd6d2b228f44"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.44/gnostr-lookup-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "e73ffe5c74dc225ad91a5a9bcc8ebe4d66587b81b43962ec099d5c17904daa4d"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.45/gnostr-lookup-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "7b84ed4f10dfe5dc4ffbf592421d22fc41684f20520756c198e8de416c0e5df1"
     end
   end
   license "Apache-2.0"
