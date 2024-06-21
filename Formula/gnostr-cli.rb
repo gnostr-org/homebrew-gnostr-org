@@ -1,21 +1,21 @@
 class GnostrCli < Formula
   desc "git+nostr workflow utility"
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.44"
+  version "0.0.45"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.44/gnostr-cli-aarch64-apple-darwin.tar.gz"
-      sha256 "4be9f298e1ea064ed2d6b048135cb44ed996cf2c7609a0b605d760608796c5f5"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.45/gnostr-cli-aarch64-apple-darwin.tar.gz"
+      sha256 "8cd87d29c0db3f423acfe29135ddd25aed4888400b7bc67a4607e75b37c4c345"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.44/gnostr-cli-x86_64-apple-darwin.tar.gz"
-      sha256 "371b54818c7c6957785e4861f8faf0dafe146d9ef9c724b5aa71b720a3dcc80c"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.45/gnostr-cli-x86_64-apple-darwin.tar.gz"
+      sha256 "ec4a46e1d4d4782f14d421444cc2df38ef4613149805334a5fcd98931925b592"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.44/gnostr-cli-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "164085b8d3ee0122b7023ac6cf553c8153c546b952e3e5285fad14aa50a1fff3"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.45/gnostr-cli-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "c685a36a291ace3fb051942e6c8d82549a33adab4b5c1795c568e9f36dd3f723"
     end
   end
   license "Apache-2.0"
