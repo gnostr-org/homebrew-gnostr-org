@@ -1,26 +1,25 @@
 class GnostrTui < Formula
   desc "blazing fast terminal-ui for git"
-  homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.45"
+  version "0.0.7"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.45/gnostr-tui-aarch64-apple-darwin.tar.gz"
-      sha256 "0d7fbbd5319bd63b59eb624094850b843df2a12819038d8a3674bac374cd33bc"
+      url "https://github.com/gnostr-org/gnostr-git/releases/download/v0.0.7/gnostr-tui-aarch64-apple-darwin.tar.xz"
+      sha256 "f21ecde11a324217e05fedede680ab65ecc1e1678887bd8bfa89b348c0df479e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.45/gnostr-tui-x86_64-apple-darwin.tar.gz"
-      sha256 "b1368e3c5841f0ebcff744ed1bbcb80e15cec1c4f5a11258fd534b0d86f8d27d"
+      url "https://github.com/gnostr-org/gnostr-git/releases/download/v0.0.7/gnostr-tui-x86_64-apple-darwin.tar.xz"
+      sha256 "882c82b7bd5b0a57ae842639c0460fc18c6a8867fffcff08dedcb86bdef8a6b9"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.45/gnostr-tui-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "2359eb82f0ea031b6166f274be75ba7251f9ae96bd293b7644474e0bab3ee5d8"
+      url "https://github.com/gnostr-org/gnostr-git/releases/download/v0.0.7/gnostr-tui-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "c8da8a44d60d0d918070f65ef7401bef517f2a433b9f8660a8c6952fe54126fa"
     end
   end
-  license "Apache-2.0"
+  license "MIT"
 
-  BINARY_ALIASES = {"aarch64-apple-darwin": {}, "x86_64-apple-darwin": {}, "x86_64-unknown-linux-gnu": {}}
+  BINARY_ALIASES = {"aarch64-apple-darwin": {}, "x86_64-apple-darwin": {}, "x86_64-pc-windows-gnu": {}, "x86_64-unknown-linux-gnu": {}, "x86_64-unknown-linux-musl-dynamic": {}, "x86_64-unknown-linux-musl-static": {}}
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
@@ -39,13 +38,13 @@ class GnostrTui < Formula
 
   def install
     if OS.mac? && Hardware::CPU.arm?
-      bin.install "git-tui", "gnostr-tui"
+      bin.install "gnostr-tui"
     end
     if OS.mac? && Hardware::CPU.intel?
-      bin.install "git-tui", "gnostr-tui"
+      bin.install "gnostr-tui"
     end
     if OS.linux? && Hardware::CPU.intel?
-      bin.install "git-tui", "gnostr-tui"
+      bin.install "gnostr-tui"
     end
 
     install_binary_aliases!
