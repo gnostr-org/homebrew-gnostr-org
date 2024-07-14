@@ -1,6 +1,10 @@
 
 ## gnostr-org/homebrew-gnostr-org
 
+### USAGE: set a `HOMEBREW_TAP_TOKEN` in your organization secrets or repo settings.
+
+
+
 ###### This is a [homebrew tap](https://docs.brew.sh/Taps) for [gnostr.org](https://gnostr.org/) - a git+nostr workflow utility
 
 ```
