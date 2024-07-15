@@ -1,21 +1,21 @@
 class GnostrGit < Formula
   desc "A command-line application for interacting with git repositories"
   homepage "https://github.com/gnostr-org/gnostr-git"
-  version "0.0.7"
+  version "0.0.8"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr-git/releases/download/v0.0.7/gnostr-git-aarch64-apple-darwin.tar.xz"
-      sha256 "1f68c3cba23631501334de0d0d10576d13de0e4d3ed7c191fe5af2028b21b5dc"
+      url "https://github.com/gnostr-org/gnostr-git/releases/download/v0.0.8/gnostr-git-aarch64-apple-darwin.tar.xz"
+      sha256 "79a8a23f3c7c9f9b6c510fffe7d7799d7d8d39b829559918b0353bb0aa8bad8d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr-git/releases/download/v0.0.7/gnostr-git-x86_64-apple-darwin.tar.xz"
-      sha256 "9c58f6e8f131e31796f1a450a90377c46a4a9f3f48d320f4456b9f68219c9133"
+      url "https://github.com/gnostr-org/gnostr-git/releases/download/v0.0.8/gnostr-git-x86_64-apple-darwin.tar.xz"
+      sha256 "f11b75b1418b2ac0eef5879d353583af05efb01328c005048c5b8a37a35f459c"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr-git/releases/download/v0.0.7/gnostr-git-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "b5acd35b487d7c9884ebcc423af879d9f4741686ce04b7663ac7f72a792198e2"
+      url "https://github.com/gnostr-org/gnostr-git/releases/download/v0.0.8/gnostr-git-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "76482b7ad8a0fb6af7212b1d465f04e5976299b09d7849f4b6d5d1156a7fffe5"
     end
   end
   license "MIT OR Apache-2.0"
