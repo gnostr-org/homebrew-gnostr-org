@@ -1,26 +1,26 @@
 class Nips < Formula
   desc "The nips application"
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.45"
+  version "0.0.49"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.45/nips-aarch64-apple-darwin.tar.gz"
-      sha256 "647abc0e23eb07ab817f2016c6af5b9a89d0bc8be1b4513ce9492bdd556a59a4"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.49/nips-aarch64-apple-darwin.tar.gz"
+      sha256 "c47fd802dacd97853c33658afe8cb00ceef401064fe00f5f588b7305a99c0f54"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.45/nips-x86_64-apple-darwin.tar.gz"
-      sha256 "72e82d95f59cfe09cde7a1c3afec9dade31c59f816c3e152fe3870282b8cab31"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.49/nips-x86_64-apple-darwin.tar.gz"
+      sha256 "6b76883b631dc9ebafe33e307cf79f2f0d4caf17871d45c61a025f4c732a9968"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.45/nips-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "46a2c8f27108ccba0c430a37ab3d78f8bacabf3dab17c66e6641e2b477252a78"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.49/nips-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "ec02fd96323424e2aca56fd1f4b9e4c73a1a22ec6e179c9d1f2917e7d73fee1c"
     end
   end
   license "Apache-2.0"
 
-  BINARY_ALIASES = {"aarch64-apple-darwin": {}, "x86_64-apple-darwin": {}, "x86_64-unknown-linux-gnu": {}}
+  BINARY_ALIASES = {"aarch64-apple-darwin": {}, "x86_64-apple-darwin": {}, "x86_64-unknown-linux-gnu": {}, "x86_64-unknown-linux-musl-dynamic": {}, "x86_64-unknown-linux-musl-static": {}}
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
