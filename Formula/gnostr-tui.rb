@@ -1,21 +1,21 @@
 class GnostrTui < Formula
   desc "blazing fast terminal-ui for git"
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.49"
+  version "0.0.50"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.49/gnostr-tui-aarch64-apple-darwin.tar.gz"
-      sha256 "85c3ab39d70e6e60542c3bee686fb5c697805fe9eb58a68cca4debfacf374436"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.50/gnostr-tui-aarch64-apple-darwin.tar.gz"
+      sha256 "a0419a73c609e3e0278454d9aacb0c3b8c34c60f44a823cc5c8addad6a27c1ee"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.49/gnostr-tui-x86_64-apple-darwin.tar.gz"
-      sha256 "1b26d11edad8ac1cfe1220b4e3dc17f7c90024d0c46d819fd2e1e2c33757ffbf"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.50/gnostr-tui-x86_64-apple-darwin.tar.gz"
+      sha256 "60bda96f29cd7fbed096057e825bcd52cf9ef289bf77b10a164e36599f06ffeb"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.49/gnostr-tui-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "a6d20a43cfdc88a207b8776dbd97ff6699e6ae0f47d2d838a309e3b89d552c13"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.50/gnostr-tui-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "2cd4270556b9c0ab5f0f7f82b84ae31333374a1ec0035468c5d0d992eb7d0959"
     end
   end
   license "Apache-2.0"
