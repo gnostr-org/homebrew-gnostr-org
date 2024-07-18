@@ -1,21 +1,21 @@
 class JjCli < Formula
   desc "gnostr: a git+nostr workflow utility."
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.49"
+  version "0.0.50"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.49/jj-cli-aarch64-apple-darwin.tar.gz"
-      sha256 "e90849b816a038d20a0620584c1e339c18d5d75a2ee46e697e90c38bd7097ccb"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.50/jj-cli-aarch64-apple-darwin.tar.gz"
+      sha256 "974f58bedcccfe7e0e81f864127c9a4bae67c8d7d1ff08aa9f7ffad40b914067"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.49/jj-cli-x86_64-apple-darwin.tar.gz"
-      sha256 "08a6f8bc8e2b10623d6d043b5b44cae6d83af02a86c45f1b959bb10ca7418dd1"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.50/jj-cli-x86_64-apple-darwin.tar.gz"
+      sha256 "d250e552fe0eec0dc4062fc00678e94b786683530b8934e938444b047f75a4a9"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.49/jj-cli-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "e29f0675a5d1f08c1b59664cdf2e40ba17a5d49908262fe569e79fb404958df1"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.50/jj-cli-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "2f9667896c50979373b7af1f8e66967b07f2b2f6371ae0b5acf58bcb0ed2b1b1"
     end
   end
   license "Apache-2.0"
