@@ -1,26 +1,26 @@
 class JjCli < Formula
   desc "gnostr: a git+nostr workflow utility."
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.45"
+  version "0.0.49"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.45/jj-cli-aarch64-apple-darwin.tar.gz"
-      sha256 "5d3eaf6397b1f6c6e5aacd65e7cd959e9bf80bd2a4a493522a7ebbddb4c7c434"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.49/jj-cli-aarch64-apple-darwin.tar.gz"
+      sha256 "e90849b816a038d20a0620584c1e339c18d5d75a2ee46e697e90c38bd7097ccb"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.45/jj-cli-x86_64-apple-darwin.tar.gz"
-      sha256 "13c8d6722b9f731a74e56db3d87b48c39ac0e26b4c40c03acb4f86f8529ab974"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.49/jj-cli-x86_64-apple-darwin.tar.gz"
+      sha256 "08a6f8bc8e2b10623d6d043b5b44cae6d83af02a86c45f1b959bb10ca7418dd1"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.45/jj-cli-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "d1f239e7e6fdee1c0e029db70f94ca07b1d15ab6b7312bb8b9e31d464552b5f4"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.49/jj-cli-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "e29f0675a5d1f08c1b59664cdf2e40ba17a5d49908262fe569e79fb404958df1"
     end
   end
   license "Apache-2.0"
 
-  BINARY_ALIASES = {"aarch64-apple-darwin": {}, "x86_64-apple-darwin": {}, "x86_64-unknown-linux-gnu": {}}
+  BINARY_ALIASES = {"aarch64-apple-darwin": {}, "x86_64-apple-darwin": {}, "x86_64-unknown-linux-gnu": {}, "x86_64-unknown-linux-musl-dynamic": {}, "x86_64-unknown-linux-musl-static": {}}
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
@@ -39,13 +39,13 @@ class JjCli < Formula
 
   def install
     if OS.mac? && Hardware::CPU.arm?
-      bin.install "fake-diff-editor", "fake-editor", "git-gnostr", "git-gnostr-gui", "git-gnostr-jj", "gnostr", "gnostr-gui", "jj"
+      bin.install "fake-diff-editor", "fake-editor", "git-gnostr-jj", "gnostr", "jj"
     end
     if OS.mac? && Hardware::CPU.intel?
-      bin.install "fake-diff-editor", "fake-editor", "git-gnostr", "git-gnostr-gui", "git-gnostr-jj", "gnostr", "gnostr-gui", "jj"
+      bin.install "fake-diff-editor", "fake-editor", "git-gnostr-jj", "gnostr", "jj"
     end
     if OS.linux? && Hardware::CPU.intel?
-      bin.install "fake-diff-editor", "fake-editor", "git-gnostr", "git-gnostr-gui", "git-gnostr-jj", "gnostr", "gnostr-gui", "jj"
+      bin.install "fake-diff-editor", "fake-editor", "git-gnostr-jj", "gnostr", "jj"
     end
 
     install_binary_aliases!
