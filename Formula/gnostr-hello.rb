@@ -1,11 +1,11 @@
 class GnostrHello < Formula
   desc "gnostr-hello: extrememly simple async web service in rust"
   homepage "https://github.com/gnostr-org/gnostr-hello"
-  version "0.0.2"
+  version "0.0.3"
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr-hello/releases/download/v0.0.2/gnostr-hello-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "8f889b896a247631c7dbfb8fbf28c56e3c0d4110d1afbe4329ec6c0a99f391e5"
+      url "https://github.com/gnostr-org/gnostr-hello/releases/download/v0.0.3/gnostr-hello-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "7288f03b8ec27611ae925f788c737a7102bc7042da2302896b178953e3febd9d"
     end
   end
 
