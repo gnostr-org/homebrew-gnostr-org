@@ -5,7 +5,7 @@ class GnostrHello < Formula
   if OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/gnostr-org/gnostr-hello/releases/download/v0.0.1/gnostr-hello-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "e19e2e7eba475dda7a4f8b72fabf5e75bc95726059604ebdef81cdba8a58c2bb"
+      sha256 "1314f01b7506ee06f46b74e3cde31250d8f1c65294e141a8902f4735e82651a8"
     end
   end
 
