@@ -1,21 +1,21 @@
 class GnostrRs < Formula
   desc "git+nostr workflow utility"
   homepage "https://github.com/gnostr-org/gnostr_rs"
-  version "0.0.3"
+  version "0.0.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr_rs/releases/download/v0.0.3/gnostr_rs-aarch64-apple-darwin.tar.xz"
-      sha256 "9d55e348e5cce1d0b3cd2ce9a6ba64bd62f0ecca182c1e80b7a41c47290adc78"
+      url "https://github.com/gnostr-org/gnostr_rs/releases/download/v0.0.4/gnostr_rs-aarch64-apple-darwin.tar.xz"
+      sha256 "89e6f9a7822e84292ce6d6f289cda16fee37ec6d3066d7f1514b2d80e757218e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr_rs/releases/download/v0.0.3/gnostr_rs-x86_64-apple-darwin.tar.xz"
-      sha256 "1f1b1a62bc214d77293374e73650dc3fb7ccfbd1a783a2193f313c69f57fd26d"
+      url "https://github.com/gnostr-org/gnostr_rs/releases/download/v0.0.4/gnostr_rs-x86_64-apple-darwin.tar.xz"
+      sha256 "ca06d97bacffb33e5076501d27927f8e227a7ae063f80af80cf766a5d40f4d08"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr_rs/releases/download/v0.0.3/gnostr_rs-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "a3cdb592090c18cf91fc4584a2fda058f4b8d7925d11f63b3502b67a4da42a25"
+      url "https://github.com/gnostr-org/gnostr_rs/releases/download/v0.0.4/gnostr_rs-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "196625717ce2b5149218c2ff2155c59b452ab08bf7008016acf6f37bc1ebcf19"
     end
   end
   license "MIT"
@@ -39,13 +39,13 @@ class GnostrRs < Formula
 
   def install
     if OS.mac? && Hardware::CPU.arm?
-      bin.install "gnostr"
+      bin.install "gnostr", "gnostr_dashboard"
     end
     if OS.mac? && Hardware::CPU.intel?
-      bin.install "gnostr"
+      bin.install "gnostr", "gnostr_dashboard"
     end
     if OS.linux? && Hardware::CPU.intel?
-      bin.install "gnostr"
+      bin.install "gnostr", "gnostr_dashboard"
     end
 
     install_binary_aliases!
