@@ -1,26 +1,25 @@
 class GnostrRs < Formula
   desc "git+nostr workflow utility"
   homepage "https://github.com/gnostr-org/gnostr_rs"
-  version "0.0.5"
+  version "0.0.7"
   if OS.mac?
-    if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr_rs/releases/download/v0.0.5/gnostr_rs-aarch64-apple-darwin.tar.xz"
-      sha256 "17a261bde850b056ca567847b4e64b406befcb32177adb9dc95466dbee909777"
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr_rs/releases/download/v0.0.5/gnostr_rs-x86_64-apple-darwin.tar.xz"
-      sha256 "816c16e3f3aeb1f4c94e72767dd1a83b7f03372c230537f9a4485fdce20ea908"
-    end
+    url "https://github.com/gnostr-org/gnostr_rs/releases/download/v0.0.7/gnostr_rs-x86_64-apple-darwin.tar.xz"
+    sha256 "58de32acc812af2f8e61268d6992c91120ac95639020f09a2a2cf61be189aaaf"
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr_rs/releases/download/v0.0.5/gnostr_rs-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "eb297b710084e3f0a0b4ecaf620c75cdebd662794f26c832bd4e2e5a1d4bd150"
+      url "https://github.com/gnostr-org/gnostr_rs/releases/download/v0.0.7/gnostr_rs-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "21b1c6d0cd291bde7d98b528a549711094685ac320b950ae4b92bd788c6e7db2"
     end
   end
   license "MIT"
+  
+  depends_on "openssl@3"
+  depends_on "openssl@3"
+  depends_on "openssl@3"
+  depends_on "openssl@3"
 
-  BINARY_ALIASES = {"aarch64-apple-darwin": {}, "x86_64-apple-darwin": {}, "x86_64-pc-windows-gnu": {}, "x86_64-unknown-linux-gnu": {}, "x86_64-unknown-linux-musl-dynamic": {}, "x86_64-unknown-linux-musl-static": {}}
+  BINARY_ALIASES = {"aarch64-apple-darwin": {}, "x86_64-apple-darwin": {}, "x86_64-pc-windows-gnu": {}, "x86_64-unknown-linux-gnu": {}}
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
@@ -39,13 +38,13 @@ class GnostrRs < Formula
 
   def install
     if OS.mac? && Hardware::CPU.arm?
-      bin.install "gnostr", "gnostr_dashboard"
+      bin.install "gnostr_dashboard", "gnostr_rs"
     end
     if OS.mac? && Hardware::CPU.intel?
-      bin.install "gnostr", "gnostr_dashboard"
+      bin.install "gnostr_dashboard", "gnostr_rs"
     end
     if OS.linux? && Hardware::CPU.intel?
-      bin.install "gnostr", "gnostr_dashboard"
+      bin.install "gnostr_dashboard", "gnostr_rs"
     end
 
     install_binary_aliases!
