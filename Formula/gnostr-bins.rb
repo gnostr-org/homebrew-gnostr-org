@@ -1,15 +1,15 @@
 class GnostrBins < Formula
   desc "git+nostr workflow utility"
   homepage "https://github.com/gnostr-org/gnostr-bins"
-  version "0.0.52"
+  version "0.0.53"
   if OS.mac?
-    url "https://github.com/gnostr-org/gnostr-bins/releases/download/v0.0.52/gnostr-bins-x86_64-apple-darwin.tar.xz"
-    sha256 "9f77cdb789566cd36782fc29044c3bcbfcddeb4744a36a50a2a6a72a8b908487"
+    url "https://github.com/gnostr-org/gnostr-bins/releases/download/v0.0.53/gnostr-bins-x86_64-apple-darwin.tar.xz"
+    sha256 "4b41ad4812fbe41cd21e2e0249155b49df471bfe91d930481935f44fd585de9b"
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr-bins/releases/download/v0.0.52/gnostr-bins-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "cbba1b74c1bd7c39f9893acc7afa707d2648c5c750f4c762e41472643fca1865"
+      url "https://github.com/gnostr-org/gnostr-bins/releases/download/v0.0.53/gnostr-bins-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "f8ceb067d088df5616ed79771098602bb8466c8077fa075e31a4c13b0e5f008f"
     end
   end
   license "Apache-2.0"
