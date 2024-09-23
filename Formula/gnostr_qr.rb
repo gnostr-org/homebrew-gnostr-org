@@ -1,21 +1,21 @@
 class GnostrQr < Formula
-  desc "gnostr_rs: part of the git+nostr workflow utility"
+  desc "gnostr_qr: part of the git+nostr workflow utility"
   homepage "https://github.com/gnostr-org/gnostr_qr"
-  version "0.0.3"
+  version "0.0.5"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr_qr/releases/download/v0.0.3/gnostr_qr-aarch64-apple-darwin.tar.xz"
-      sha256 "e363de0e53dd4e517647cb32d6b9394e44180ec5c6b4450a943f7d12ba036e08"
+      url "https://github.com/gnostr-org/gnostr_qr/releases/download/v0.0.5/gnostr_qr-aarch64-apple-darwin.tar.xz"
+      sha256 "6211e352f6ae4f2ae0dd3826215c7ea34e9c0a7e13c6b05d721cbd29e85e21f8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr_qr/releases/download/v0.0.3/gnostr_qr-x86_64-apple-darwin.tar.xz"
-      sha256 "aa78d77f815390fcbbc7a930fdcbef5ab900d7bc30197fd909914bc0cb45b2fd"
+      url "https://github.com/gnostr-org/gnostr_qr/releases/download/v0.0.5/gnostr_qr-x86_64-apple-darwin.tar.xz"
+      sha256 "b75f1021df9533851f485a99232f78fdaa47fa18501d7db5040ab4f669a9c8dd"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr_qr/releases/download/v0.0.3/gnostr_qr-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "40726dd07c747c18895fc596bc67c20aba400cd70ca62962f23eca72c46f48b3"
+      url "https://github.com/gnostr-org/gnostr_qr/releases/download/v0.0.5/gnostr_qr-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "c974f547e9ef9fcbd6e5268654b15708c95f1757d8baa5771bc20d420ef4868e"
     end
   end
   license "MIT"
