@@ -2,22 +2,14 @@ class NostrConsole < Formula
   desc "Command-line client for Nostr using Dart"
   homepage "https://github.com/vishalxl/nostr_console"
   url "https://github.com/vishalxl/nostr_console.git",
-      tag:      "v0.3.5-beta",
-      revision: "00125a3b6b2569c4143eb9c09b351fea32e6f851"
+      tag:      "v0.3.6-beta",
+      revision: "9f507cc5390931702c50e6de6a6b3528de583093"
   license "AGPL-3.0-only"
   head "https://github.com/vishalxl/nostr_console.git", branch: "main"
 
   livecheck do
-    url :url
-    regex(/v?(\d+(?:\.\d+)+(?:-\w+))/i)
-    strategy :github_releases do |json, regex|
-      json.map do |release|
-        match = release["tag_name"]&.match(regex)
-        next if match.blank?
-
-        match[1]
-      end
-    end
+    url :stable
+    strategy :git
   end
 
   depends_on "dart-sdk" => :build

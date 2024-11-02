@@ -10,16 +10,12 @@ cask "iris-messenger" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    strategy :git
+    regex(/^app[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
   # Rename to avoid conflict with homebrew/cask/iris
   app "iris.app", target: "Iris Messenger.app"
-
-  preflight do
-    system_command "xattr",
-                   args: ["-rd", "com.apple.quarantine", "#{staged_path}/iris.app"]
-  end
 
   zap trash: [
     "~/Library/Caches/to.iris",
@@ -28,12 +24,5 @@ cask "iris-messenger" do
 
   caveats do
     requires_rosetta
-    <<~EOS
-      This app is not signed with an Apple Developer certificate. Therefore in order
-      to run it may be necessary to override the macOS security policy. This can be
-      done with homebrew using the `--no-quarantine` option:
-
-        brew reinstall --cask --no-quarantine #{token}
-    EOS
   end
 end

@@ -1,6 +1,6 @@
 cask "nostur" do
-  version "1.7.0"
-  sha256 "b1be3d0f34310ae1c55a063de260bdeb294aea1ec2ad0779bddebfc31244e3e0"
+  version "1.16.0"
+  sha256 "335b897bb87fea66e165d080ea9188c4252e6f680112db2b125cf3a268242036"
 
   url "https://nostur.com/Nostur-#{version}.dmg"
   name "Nostur"
@@ -15,7 +15,5 @@ cask "nostur" do
 
   app "Nostur.app"
 
-  zap trash: [
-    "~/Library/Containers/nostur.com.Nostur",
-  ]
+  zap trash: "~/Library/Containers/nostur.com.Nostur"
 end

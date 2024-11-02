@@ -1,12 +1,11 @@
 cask "lume" do
-  version "1.2.5"
-  sha256 "5707fcc8239faeae43f4c725740f962e7a93e065e52428a8d05545997e29b434"
+  version "4.3.0"
+  sha256 "9789eec6bd5607e0532ef2ca1741d795e67a24d0f2c36de8588ad6f48da95caa"
 
-  url "https://github.com/luminous-devs/lume/releases/download/v#{version}/Lume_#{version}_universal.dmg",
-      verified: "github.com/luminous-devs/lume/"
+  url "https://github.com/lumehq/lume/releases/download/v#{version}/Lume_#{version}_universal.dmg"
   name "Lume"
-  desc "Ambitious nostr client"
-  homepage "https://lume.nu/"
+  desc "Multi-purpose nostr client"
+  homepage "https://github.com/lumehq/lume"
 
   livecheck do
     url :url
@@ -16,10 +15,9 @@ cask "lume" do
   app "Lume.app"
 
   zap trash: [
-    "~/Library/Application Support/com.lume.nu",
-    "~/Library/Caches/com.lume.nu",
-    "~/Library/Preferences/com.lume.nu.plist",
-    "~/Library/Saved Application State/com.lume.nu.savedState",
-    "~/Library/WebKit/com.lume.nu",
+    "~/Library/Application Support/nu.lume.Lume",
+    "~/Library/Caches/nu.lume.Lume",
+    "~/Library/Saved Application State/nu.lume.Lume.savedState",
+    "~/Library/WebKit/nu.lume.Lume",
   ]
 end

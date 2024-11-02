@@ -2,8 +2,8 @@ class Algia < Formula
   desc "Nostr CLI client written in Go"
   homepage "https://github.com/mattn/algia"
   url "https://github.com/mattn/algia.git",
-      tag:      "v0.0.45",
-      revision: "b0466aa52fc4fe1f15c8c8dde72d7659427226ac"
+      tag:      "v0.0.83",
+      revision: "4d721e878b05887451ccd073483aef88d9bd3f9b"
   license "MIT"
   head "https://github.com/mattn/algia.git", branch: "master"
 
@@ -11,9 +11,7 @@ class Algia < Formula
 
   def install
     ENV["CGO_ENABLED"] = "0"
-    system "go", "mod", "tidy"
-    system "go", "build"
-    bin.install "algia"
+    system "go", "build", *std_go_args
   end
 
   test do

@@ -2,8 +2,8 @@ class Gossip < Formula
   desc "Desktop client for Nostr written in Rust"
   homepage "https://github.com/mikedilger/gossip"
   url "https://github.com/mikedilger/gossip.git",
-      tag:      "v0.8.1",
-      revision: "404f5a405c8796e90bb5cc078378149d3c341f26"
+      tag:      "v0.12.0",
+      revision: "cddb57cac6ca983e8d6aaa1636d4b466baefa811"
   license "MIT"
   head "https://github.com/mikedilger/gossip.git", branch: "master"
 
@@ -13,14 +13,11 @@ class Gossip < Formula
   depends_on "cmake" => :build
   depends_on "rust" => :build
 
-  on_macos do
-    depends_on "ffmpeg" => :recommended
-  end
+  depends_on "ffmpeg" => :optional
 
   on_linux do
     depends_on "libxkbcommon"
     depends_on "mesa"
-    depends_on "ffmpeg" => :optional
   end
 
   def install
@@ -35,11 +32,7 @@ class Gossip < Formula
     # required for successful build on intel or linux
     ENV["RUSTFLAGS"] = "--cfg tokio_unstable"
 
-    # for building against sdl2 from homebrew
-    ENV.prepend "CPPFLAGS", "-I#{HOMEBREW_PREFIX}/include"
-    ENV.prepend "LDFLAGS", "-L#{HOMEBREW_PREFIX}/lib -Wl,-rpath,#{HOMEBREW_PREFIX}/lib"
-
-    system "cargo", "install", *std_cargo_args, *build_args
+    system "cargo", "install", *std_cargo_args(path: "gossip-bin"), *build_args
     cd "target/release" do
       bin.install "gossip"
       if build.with? "ffmpeg"
