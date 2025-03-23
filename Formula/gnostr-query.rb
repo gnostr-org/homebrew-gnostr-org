@@ -1,20 +1,20 @@
 class GnostrQuery < Formula
   desc "The gnostr-query application"
   homepage "https://github.com/gnostr-org/gnostr-query"
-  version "0.0.2"
+  version "0.0.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr-query/releases/download/v0.0.2/gnostr-query-aarch64-apple-darwin.tar.xz"
-      sha256 "eb791379ea1405e439e1fc4fb496cf9435d506427defa200758c679dd518a306"
+      url "https://github.com/gnostr-org/gnostr-query/releases/download/v0.0.3/gnostr-query-aarch64-apple-darwin.tar.xz"
+      sha256 "b39cbf187b949be0ac81d5cb4253923bef537b32d3b6a150091fbfd89d27c0be"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr-query/releases/download/v0.0.2/gnostr-query-x86_64-apple-darwin.tar.xz"
-      sha256 "3583972ed1cd1cc46061cb90ea14ddad8e955b7d4d5106bcaa11cdcfc08aedff"
+      url "https://github.com/gnostr-org/gnostr-query/releases/download/v0.0.3/gnostr-query-x86_64-apple-darwin.tar.xz"
+      sha256 "8ce23bb3e222fe0816cbdcd3bc05509aa0ec794b704ace3e94b2c254fa605f01"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/gnostr-org/gnostr-query/releases/download/v0.0.2/gnostr-query-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "29adae74db14b9ef9047c7220d9ff022bcc49eb4a7ea6b2882e69c8e8da5bf71"
+    url "https://github.com/gnostr-org/gnostr-query/releases/download/v0.0.3/gnostr-query-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "e7c91dc68097a8f89043ac7e3c58bc61053018ce4cd0da8652ff2e6f5777650a"
   end
 
   BINARY_ALIASES = {
@@ -40,9 +40,9 @@ class GnostrQuery < Formula
   end
 
   def install
-    bin.install "gnostr-query", "gnostr-query-tui" if OS.mac? && Hardware::CPU.arm?
-    bin.install "gnostr-query", "gnostr-query-tui" if OS.mac? && Hardware::CPU.intel?
-    bin.install "gnostr-query", "gnostr-query-tui" if OS.linux? && Hardware::CPU.intel?
+    bin.install "extract_elements", "gnostr-query" if OS.mac? && Hardware::CPU.arm?
+    bin.install "extract_elements", "gnostr-query" if OS.mac? && Hardware::CPU.intel?
+    bin.install "extract_elements", "gnostr-query" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
 
