@@ -1,26 +1,34 @@
 class Nips < Formula
   desc "The nips application"
-  homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.50"
+  homepage "https://github.com/gnostr-org/gnostr-nips"
+  version "0.0.37"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.50/nips-aarch64-apple-darwin.tar.gz"
-      sha256 "40aac5dc60daa20091b140a7487295de9ef7b0d18eea0ce69a3e0298ff77e317"
+      url "https://github.com/gnostr-org/gnostr-nips/releases/download/v0.0.37/nips-aarch64-apple-darwin.tar.xz"
+      sha256 "b206499f215d0d49d388a4743435db382e3e502427d9140e309f3039a5ce93dd"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.50/nips-x86_64-apple-darwin.tar.gz"
-      sha256 "4b3a3cc3d115ebd932fb6ed70113481dbdf28b5f59fd6c10f531fc73bb874c47"
+      url "https://github.com/gnostr-org/gnostr-nips/releases/download/v0.0.37/nips-x86_64-apple-darwin.tar.xz"
+      sha256 "78cdce0dcf6f0fb193d3aa6a0b0a8386e46ee198653e684ba906668bc6b42fb5"
     end
   end
   if OS.linux?
+    if Hardware::CPU.arm?
+      url "https://github.com/gnostr-org/gnostr-nips/releases/download/v0.0.37/nips-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "2c7aefdd2525a4b4a645ed650e1e244dbc43259fa77d8ef40e09fb3e4d469014"
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.50/nips-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "a8cc61a7b4a9109ec71371aadc695060f8c378c49678448801bb354829b844b0"
+      url "https://github.com/gnostr-org/gnostr-nips/releases/download/v0.0.37/nips-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "d4ab743c7e07a6157563fd672ab6793899baaceda2bca1c2ba8acf4fc797cfa9"
     end
   end
-  license "Apache-2.0"
 
-  BINARY_ALIASES = {"aarch64-apple-darwin": {}, "x86_64-apple-darwin": {}, "x86_64-unknown-linux-gnu": {}, "x86_64-unknown-linux-musl-dynamic": {}, "x86_64-unknown-linux-musl-static": {}}
+  BINARY_ALIASES = {
+    "aarch64-apple-darwin":      {},
+    "aarch64-unknown-linux-gnu": {},
+    "x86_64-apple-darwin":       {},
+    "x86_64-unknown-linux-gnu":  {},
+  }.freeze
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
@@ -38,15 +46,10 @@ class Nips < Formula
   end
 
   def install
-    if OS.mac? && Hardware::CPU.arm?
-      bin.install "nips"
-    end
-    if OS.mac? && Hardware::CPU.intel?
-      bin.install "nips"
-    end
-    if OS.linux? && Hardware::CPU.intel?
-      bin.install "nips"
-    end
+    bin.install "nips" if OS.mac? && Hardware::CPU.arm?
+    bin.install "nips" if OS.mac? && Hardware::CPU.intel?
+    bin.install "nips" if OS.linux? && Hardware::CPU.arm?
+    bin.install "nips" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
 
