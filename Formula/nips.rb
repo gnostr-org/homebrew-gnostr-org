@@ -1,27 +1,28 @@
 class Nips < Formula
-  desc "The nips application"
+  desc "nips: a nostr-protocol/nips server"
   homepage "https://github.com/gnostr-org/gnostr-nips"
-  version "0.0.37"
+  version "0.0.38"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr-nips/releases/download/v0.0.37/nips-aarch64-apple-darwin.tar.xz"
-      sha256 "b206499f215d0d49d388a4743435db382e3e502427d9140e309f3039a5ce93dd"
+      url "https://github.com/gnostr-org/gnostr-nips/releases/download/v0.0.38/nips-aarch64-apple-darwin.tar.xz"
+      sha256 "ff0cfb01538960179e310274a3583ee9006afe561bd1d233dfe9a4c3d792c027"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr-nips/releases/download/v0.0.37/nips-x86_64-apple-darwin.tar.xz"
-      sha256 "78cdce0dcf6f0fb193d3aa6a0b0a8386e46ee198653e684ba906668bc6b42fb5"
+      url "https://github.com/gnostr-org/gnostr-nips/releases/download/v0.0.38/nips-x86_64-apple-darwin.tar.xz"
+      sha256 "ed41fffdb72a6807dd8caff43ed6b815d0d2245b935b7859e7f2acd6c58e9eca"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr-nips/releases/download/v0.0.37/nips-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "2c7aefdd2525a4b4a645ed650e1e244dbc43259fa77d8ef40e09fb3e4d469014"
+      url "https://github.com/gnostr-org/gnostr-nips/releases/download/v0.0.38/nips-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "8bb57729d9408f4bab31fa158729db43aa4e2c1a975912c9d045b13481a7b763"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr-nips/releases/download/v0.0.37/nips-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "d4ab743c7e07a6157563fd672ab6793899baaceda2bca1c2ba8acf4fc797cfa9"
+      url "https://github.com/gnostr-org/gnostr-nips/releases/download/v0.0.38/nips-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "8b452e0614bcad9fce516e31e4ae955d07b0ca39f4ca4f7f44cf52db6d1073e6"
     end
   end
+  license "MIT"
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":      {},
