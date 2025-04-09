@@ -1,25 +1,25 @@
 class Nips < Formula
   desc "nips: a nostr-protocol/nips server"
   homepage "https://github.com/gnostr-org/gnostr-nips"
-  version "0.0.38"
+  version "0.0.39"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr-nips/releases/download/v0.0.38/nips-aarch64-apple-darwin.tar.xz"
-      sha256 "ff0cfb01538960179e310274a3583ee9006afe561bd1d233dfe9a4c3d792c027"
+      url "https://github.com/gnostr-org/gnostr-nips/releases/download/v0.0.39/nips-aarch64-apple-darwin.tar.xz"
+      sha256 "4dc7c871ab55b005adfbc717c27e2ac74940eb1f8a5fded9df8085277b2572a5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr-nips/releases/download/v0.0.38/nips-x86_64-apple-darwin.tar.xz"
-      sha256 "ed41fffdb72a6807dd8caff43ed6b815d0d2245b935b7859e7f2acd6c58e9eca"
+      url "https://github.com/gnostr-org/gnostr-nips/releases/download/v0.0.39/nips-x86_64-apple-darwin.tar.xz"
+      sha256 "f69b8ea842f62dc5c00248ba00c8865c8e7d6e0bac3ca7e80f17efaed308c2c7"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr-nips/releases/download/v0.0.38/nips-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "8bb57729d9408f4bab31fa158729db43aa4e2c1a975912c9d045b13481a7b763"
+      url "https://github.com/gnostr-org/gnostr-nips/releases/download/v0.0.39/nips-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "8310cd5850fffceaff8c16dd971430c56e1fa6158ca4ae4c007f24a9a04e9721"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr-nips/releases/download/v0.0.38/nips-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "8b452e0614bcad9fce516e31e4ae955d07b0ca39f4ca4f7f44cf52db6d1073e6"
+      url "https://github.com/gnostr-org/gnostr-nips/releases/download/v0.0.39/nips-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "05aeca73a6c528393d29cd5567d5938afdd1407ef8faed520c0c6f33202d2bbd"
     end
   end
   license "MIT"
