@@ -1,20 +1,20 @@
 class GnostrQuery < Formula
   desc "gnostr-query: retrieve nostr events."
   homepage "https://github.com/gnostr-org/gnostr-query"
-  version "0.0.4"
+  version "0.0.5"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr-query/releases/download/v0.0.4/gnostr-query-aarch64-apple-darwin.tar.xz"
-      sha256 "7c6b034525962f6b27a36bbf7061b9a48d7e5c1a616c4e391301ac50e9da88b6"
+      url "https://github.com/gnostr-org/gnostr-query/releases/download/v0.0.5/gnostr-query-aarch64-apple-darwin.tar.xz"
+      sha256 "944bbaef3e6205e2b720db35fd1a4d5fd2e34119924138395bd023c4ef1ea8aa"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr-query/releases/download/v0.0.4/gnostr-query-x86_64-apple-darwin.tar.xz"
-      sha256 "9c7854b4b94fcfb333418aac50bc6b45435bcfe293466b7e6160783e0e267876"
+      url "https://github.com/gnostr-org/gnostr-query/releases/download/v0.0.5/gnostr-query-x86_64-apple-darwin.tar.xz"
+      sha256 "44c0d70b470daeaf059c5a7fbe5c47c6234dbb4413ce2975468a248671409e03"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/gnostr-org/gnostr-query/releases/download/v0.0.4/gnostr-query-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "c31fc052bfa14865da71068e6d12a4abbb858497e3e880f38d33a64450cce6ce"
+    url "https://github.com/gnostr-org/gnostr-query/releases/download/v0.0.5/gnostr-query-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "5ceab5109479dbf73bcab0b82207eeef82dada39ac60e6ce197733c8cecd7b85"
   end
   license "MIT"
 
