@@ -1,26 +1,31 @@
 class Gnostr < Formula
-  desc "git+nostr workflow utility"
+  desc "gnostr:a git+nostr workflow utility"
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.44"
+  version "0.0.83"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.44/gnostr-aarch64-apple-darwin.tar.xz"
-      sha256 "abab1b6d3d3d9c6d6c00a2ff1292a051c75019242490ad177b00862c8705a6b1"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.83/gnostr-aarch64-apple-darwin.tar.xz"
+      sha256 "e65529860444ca6ba0625491668595ed888a162c23468de3daa79944e4486cfc"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.44/gnostr-x86_64-apple-darwin.tar.xz"
-      sha256 "a0cef580944b041e196e059a2a9b2d6f35a1d62ca73e37004f29acc1eccb3f96"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.83/gnostr-x86_64-apple-darwin.tar.xz"
+      sha256 "dff0229bcfbdc8f8d9d729d08d8aff05d9beaebb96e6d7724bb4303afa350576"
     end
   end
-  if OS.linux?
-    if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.44/gnostr-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "ed4b90998e33007597bcfae7fe38584a515552e49d3ec8a8e9493f9618da6e64"
-    end
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.83/gnostr-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "1e55e89e09bd5e1e4748d695fa92f9a674443e69f100b1aceb49936b5675d280"
   end
-  license "Apache-2.0"
+  license "MIT"
 
-  BINARY_ALIASES = {"aarch64-apple-darwin": {}, "x86_64-apple-darwin": {}, "x86_64-unknown-linux-gnu": {}}
+  BINARY_ALIASES = {
+    "aarch64-apple-darwin":              {},
+    "x86_64-apple-darwin":               {},
+    "x86_64-pc-windows-gnu":             {},
+    "x86_64-unknown-linux-gnu":          {},
+    "x86_64-unknown-linux-musl-dynamic": {},
+    "x86_64-unknown-linux-musl-static":  {},
+  }.freeze
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
@@ -38,15 +43,9 @@ class Gnostr < Formula
   end
 
   def install
-    if OS.mac? && Hardware::CPU.arm?
-      bin.install "git-gnostr", "git-nostril", "gnostr"
-    end
-    if OS.mac? && Hardware::CPU.intel?
-      bin.install "git-gnostr", "git-nostril", "gnostr"
-    end
-    if OS.linux? && Hardware::CPU.intel?
-      bin.install "git-gnostr", "git-nostril", "gnostr"
-    end
+    bin.install "git_remote_nostr", "gnostr" if OS.mac? && Hardware::CPU.arm?
+    bin.install "git_remote_nostr", "gnostr" if OS.mac? && Hardware::CPU.intel?
+    bin.install "git_remote_nostr", "gnostr" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
 
