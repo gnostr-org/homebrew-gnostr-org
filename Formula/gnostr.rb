@@ -1,20 +1,20 @@
 class Gnostr < Formula
   desc "gnostr:a git+nostr workflow utility"
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.83"
+  version "0.0.84"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.83/gnostr-aarch64-apple-darwin.tar.xz"
-      sha256 "e65529860444ca6ba0625491668595ed888a162c23468de3daa79944e4486cfc"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.84/gnostr-aarch64-apple-darwin.tar.xz"
+      sha256 "a4bebbf6479ad502beb0382bfaa5dd4383a4c6e6db6bbaabd16afe41372f5e2f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.83/gnostr-x86_64-apple-darwin.tar.xz"
-      sha256 "dff0229bcfbdc8f8d9d729d08d8aff05d9beaebb96e6d7724bb4303afa350576"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.84/gnostr-x86_64-apple-darwin.tar.xz"
+      sha256 "aaf420a73cb2455f674b8596f3a2c3d4074430610f50c6e5da19ab0cfa328042"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.83/gnostr-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "1e55e89e09bd5e1e4748d695fa92f9a674443e69f100b1aceb49936b5675d280"
+    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.84/gnostr-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "ca8649d251d5b19f1dfdce86b5426e0dae0249739b034b5294fc4809bd5ee1c1"
   end
   license "MIT"
 
@@ -43,9 +43,9 @@ class Gnostr < Formula
   end
 
   def install
-    bin.install "git_remote_nostr", "gnostr" if OS.mac? && Hardware::CPU.arm?
-    bin.install "git_remote_nostr", "gnostr" if OS.mac? && Hardware::CPU.intel?
-    bin.install "git_remote_nostr", "gnostr" if OS.linux? && Hardware::CPU.intel?
+    bin.install "git-ssh", "git_remote_nostr", "gnostr" if OS.mac? && Hardware::CPU.arm?
+    bin.install "git-ssh", "git_remote_nostr", "gnostr" if OS.mac? && Hardware::CPU.intel?
+    bin.install "git-ssh", "git_remote_nostr", "gnostr" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
 
