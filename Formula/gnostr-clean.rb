@@ -1,19 +1,20 @@
 class GnostrClean < Formula
   desc "Quickly clean up your development directories on disk"
   homepage "https://github.com/gnostr-org/gnostr-clean"
-  version "0.0.2"
+  version "0.0.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr-clean/releases/download/v0.0.2/gnostr-clean-aarch64-apple-darwin.tar.xz"
-      sha256 "fe7d014b2820c007bb8c2c4f6a5c119261cf528df0a46c1112d2fcebe5aaf7b0"
+      url "https://github.com/gnostr-org/gnostr-clean/releases/download/v0.0.4/gnostr-clean-aarch64-apple-darwin.tar.xz"
+      sha256 "c268d04e7b9368dcca79f4ac1ed3b2fc5926df5613d2122acf4b6deabf5c60ff"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr-clean/releases/download/v0.0.2/gnostr-clean-x86_64-apple-darwin.tar.xz"
-      sha256 "1aa15f807d8a0879688b6d58c14fa25e49988a5d4ea2c6a812394dbf0c488fa4"
+      url "https://github.com/gnostr-org/gnostr-clean/releases/download/v0.0.4/gnostr-clean-x86_64-apple-darwin.tar.xz"
+      sha256 "829daba773b249f9dc4f7af7595b7e96bc59372698a652cf471a5cf1bea72b52"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/gnostr-org/gnostr-clean/releases/download/v0.0.2/gnostr-clean-x86_64-unknown-linux-gnu.tar.xz"
+    url "https://github.com/gnostr-org/gnostr-clean/releases/download/v0.0.4/gnostr-clean-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "1ae875563c7366796709e4457cbf35a040333748ccf7b5e2b8b0f090f9274ad9"
   end
   license "MIT"
 
