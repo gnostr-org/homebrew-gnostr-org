@@ -2,8 +2,8 @@ class Nak < Formula
   desc "Nostr Army Knife"
   homepage "https://nak.nostr.com/"
   url "https://github.com/fiatjaf/nak.git",
-      tag:      "v0.7.7",
-      revision: "5b04bc485900dc196af1d123f00b4e037297d28a"
+      tag:      "v0.12.6",
+      revision: "b1a03800e611c1b52794fcb6768d5b04bd9494b2"
   head "https://github.com/fiatjaf/nak.git", branch: "master"
 
   depends_on "go" => :build
