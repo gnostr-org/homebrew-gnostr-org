@@ -1,20 +1,20 @@
 class Gnostr < Formula
   desc "gnostr:a git+nostr workflow utility"
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.108"
+  version "0.0.109"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.108/gnostr-aarch64-apple-darwin.tar.xz"
-      sha256 "555cf71065492408c8ce4e764e7d099ec1e3b4a859e605312413d69769d6ffff"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.109/gnostr-aarch64-apple-darwin.tar.xz"
+      sha256 "369773ca2174be284bce97c2ea1e33e7af2a3fbacdb6609dd44e2b5a7ef03768"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.108/gnostr-x86_64-apple-darwin.tar.xz"
-      sha256 "5aa3ce854726a4458a5dfebbd38197b5890f285a7e8e2cdb4f38c20762673e7c"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.109/gnostr-x86_64-apple-darwin.tar.xz"
+      sha256 "d2369f9d53d59563612e543d55410c89e43044318c4df971a0a8fb6c798d4c30"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.108/gnostr-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "a172d2b7c9ef5f49e3298b34202cad39a656f62a7ecd3a400352002b2fcf7ad0"
+    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.109/gnostr-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "61a2874e11550b23711a035d66ed2b20f5d43602d904200606a165ddcb9fa58c"
   end
   license "MIT"
 
@@ -44,16 +44,16 @@ class Gnostr < Formula
 
   def install
     if OS.mac? && Hardware::CPU.arm?
-      bin.install "create_event", "create_event_raw", "create_giftwrap", "create_nevent", "decrypt_private_key",
-"dump_relay", "dump_relay_with_login", "encrypt_private_key", "fetch_by_filter", "fetch_by_id_with_login", "fetch_by_kind_and_author", "fetch_by_kind_and_author_limit", "fetch_by_kind_and_author_with_login", "fetch_giftwraps", "fetch_metadata", "fetch_nip11", "fetch_relay_list", "form_naddr", "git-ssh", "git_remote_nostr", "gnostr", "gnostr-add", "gnostr-bech32-to-any", "gnostr-blame", "gnostr-blockhash", "gnostr-blockheight", "gnostr-cat-file", "gnostr-cli-example", "gnostr-clone", "gnostr-decrypt-private_key", "gnostr-diff", "gnostr-dump-relay", "gnostr-encrypt-private_key", "gnostr-fetch", "gnostr-fetch-by-id", "gnostr-fetch-by-id-with-login", "gnostr-fetch-by-kind-and-author", "gnostr-fetch-metadata", "gnostr-fetch-nip11", "gnostr-fetch-pubkey-relays", "gnostr-fetch-relay-list", "gnostr-fetch-watch-list", "gnostr-fetch-watch-list-iterator", "gnostr-form-event-addr", "gnostr-generate-keypair", "gnostr-get-relays", "gnostr-hash", "gnostr-init", "gnostr-ls-remote", "gnostr-pi", "gnostr-post-event", "gnostr-privkey-to-bech32", "gnostr-pubkey-to-bech32", "gnostr-reflog", "gnostr-remote", "gnostr-rev-list", "gnostr-rev-parse", "gnostr-sha256", "gnostr-status", "gnostr-tag", "gnostr-verify-keypair", "gnostr-weeble", "gnostr-wobble", "gnostr-xor", "id_to_bech32", "post_event", "post_from_files", "privkey_to_bech32", "pubkey_to_bech32", "test_nip46", "verify_event", "verify_keypair"
+      bin.install "git-ssh", "git_remote_nostr", "gnostr", "gnostr-blockhash", "gnostr-blockheight", "gnostr-sha256",
+"gnostr-weeble", "gnostr-wobble"
     end
     if OS.mac? && Hardware::CPU.intel?
-      bin.install "create_event", "create_event_raw", "create_giftwrap", "create_nevent", "decrypt_private_key",
-"dump_relay", "dump_relay_with_login", "encrypt_private_key", "fetch_by_filter", "fetch_by_id_with_login", "fetch_by_kind_and_author", "fetch_by_kind_and_author_limit", "fetch_by_kind_and_author_with_login", "fetch_giftwraps", "fetch_metadata", "fetch_nip11", "fetch_relay_list", "form_naddr", "git-ssh", "git_remote_nostr", "gnostr", "gnostr-add", "gnostr-bech32-to-any", "gnostr-blame", "gnostr-blockhash", "gnostr-blockheight", "gnostr-cat-file", "gnostr-cli-example", "gnostr-clone", "gnostr-decrypt-private_key", "gnostr-diff", "gnostr-dump-relay", "gnostr-encrypt-private_key", "gnostr-fetch", "gnostr-fetch-by-id", "gnostr-fetch-by-id-with-login", "gnostr-fetch-by-kind-and-author", "gnostr-fetch-metadata", "gnostr-fetch-nip11", "gnostr-fetch-pubkey-relays", "gnostr-fetch-relay-list", "gnostr-fetch-watch-list", "gnostr-fetch-watch-list-iterator", "gnostr-form-event-addr", "gnostr-generate-keypair", "gnostr-get-relays", "gnostr-hash", "gnostr-init", "gnostr-ls-remote", "gnostr-pi", "gnostr-post-event", "gnostr-privkey-to-bech32", "gnostr-pubkey-to-bech32", "gnostr-reflog", "gnostr-remote", "gnostr-rev-list", "gnostr-rev-parse", "gnostr-sha256", "gnostr-status", "gnostr-tag", "gnostr-verify-keypair", "gnostr-weeble", "gnostr-wobble", "gnostr-xor", "id_to_bech32", "post_event", "post_from_files", "privkey_to_bech32", "pubkey_to_bech32", "test_nip46", "verify_event", "verify_keypair"
+      bin.install "git-ssh", "git_remote_nostr", "gnostr", "gnostr-blockhash", "gnostr-blockheight", "gnostr-sha256",
+"gnostr-weeble", "gnostr-wobble"
     end
     if OS.linux? && Hardware::CPU.intel?
-      bin.install "create_event", "create_event_raw", "create_giftwrap", "create_nevent", "decrypt_private_key",
-"dump_relay", "dump_relay_with_login", "encrypt_private_key", "fetch_by_filter", "fetch_by_id_with_login", "fetch_by_kind_and_author", "fetch_by_kind_and_author_limit", "fetch_by_kind_and_author_with_login", "fetch_giftwraps", "fetch_metadata", "fetch_nip11", "fetch_relay_list", "form_naddr", "git-ssh", "git_remote_nostr", "gnostr", "gnostr-add", "gnostr-bech32-to-any", "gnostr-blame", "gnostr-blockhash", "gnostr-blockheight", "gnostr-cat-file", "gnostr-cli-example", "gnostr-clone", "gnostr-decrypt-private_key", "gnostr-diff", "gnostr-dump-relay", "gnostr-encrypt-private_key", "gnostr-fetch", "gnostr-fetch-by-id", "gnostr-fetch-by-id-with-login", "gnostr-fetch-by-kind-and-author", "gnostr-fetch-metadata", "gnostr-fetch-nip11", "gnostr-fetch-pubkey-relays", "gnostr-fetch-relay-list", "gnostr-fetch-watch-list", "gnostr-fetch-watch-list-iterator", "gnostr-form-event-addr", "gnostr-generate-keypair", "gnostr-get-relays", "gnostr-hash", "gnostr-init", "gnostr-ls-remote", "gnostr-pi", "gnostr-post-event", "gnostr-privkey-to-bech32", "gnostr-pubkey-to-bech32", "gnostr-reflog", "gnostr-remote", "gnostr-rev-list", "gnostr-rev-parse", "gnostr-sha256", "gnostr-status", "gnostr-tag", "gnostr-verify-keypair", "gnostr-weeble", "gnostr-wobble", "gnostr-xor", "id_to_bech32", "post_event", "post_from_files", "privkey_to_bech32", "pubkey_to_bech32", "test_nip46", "verify_event", "verify_keypair"
+      bin.install "git-ssh", "git_remote_nostr", "gnostr", "gnostr-blockhash", "gnostr-blockheight", "gnostr-sha256",
+"gnostr-weeble", "gnostr-wobble"
     end
 
     install_binary_aliases!
