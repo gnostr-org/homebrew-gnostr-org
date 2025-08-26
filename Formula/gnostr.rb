@@ -1,20 +1,20 @@
 class Gnostr < Formula
   desc "gnostr:a git+nostr workflow utility"
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.114"
+  version "0.0.115"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.114/gnostr-aarch64-apple-darwin.tar.xz"
-      sha256 "a6027a5f0135085581d52e16f3a1fd5e0800610bde8e2326b51abf9dc9566fe3"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.115/gnostr-aarch64-apple-darwin.tar.xz"
+      sha256 "1d19ab4ecfd3cdcbecc0eca53adf2bbdb94e1192eaf2a241ef1b9d1b8290ac43"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.114/gnostr-x86_64-apple-darwin.tar.xz"
-      sha256 "359216a79ea96dec20a9ce1797e23cae552ff432fe6cf16263270b7b5755d65d"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.115/gnostr-x86_64-apple-darwin.tar.xz"
+      sha256 "4f5a83cef58a7a76cd2c83ea8432206c8a65bb3d31bf12abeea04ae5f0cfb461"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.114/gnostr-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "a759b481b35c9b3f19da7cb63c372c7409a6a8b8385c4f8ac9622602ffee5e0d"
+    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.115/gnostr-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "846fb35a47699bb6a4d2f7973bcac868e8fe88b4aa1e8d0933250a78ef2fb6b9"
   end
   license "MIT"
 
