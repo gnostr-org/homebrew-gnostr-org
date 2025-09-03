@@ -1,20 +1,20 @@
 class Gnostr < Formula
   desc "gnostr:a git+nostr workflow utility"
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.115"
+  version "0.0.118"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.115/gnostr-aarch64-apple-darwin.tar.xz"
-      sha256 "1d19ab4ecfd3cdcbecc0eca53adf2bbdb94e1192eaf2a241ef1b9d1b8290ac43"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.118/gnostr-aarch64-apple-darwin.tar.xz"
+      sha256 "6711e65d7129b07e48729d4fdee2e0faee39f626da20a34ade4d34c39f47d27f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.115/gnostr-x86_64-apple-darwin.tar.xz"
-      sha256 "4f5a83cef58a7a76cd2c83ea8432206c8a65bb3d31bf12abeea04ae5f0cfb461"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.118/gnostr-x86_64-apple-darwin.tar.xz"
+      sha256 "0a6c77e2d51155aca8b825407c35cd962c0348384dd9d6c72666d56e40612350"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.115/gnostr-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "846fb35a47699bb6a4d2f7973bcac868e8fe88b4aa1e8d0933250a78ef2fb6b9"
+    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.118/gnostr-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "8a7529c670180d6e4656b9275b508871bdd1ddef51ff594bdaaaa338bb91dda8"
   end
   license "MIT"
 
@@ -45,15 +45,15 @@ class Gnostr < Formula
   def install
     if OS.mac? && Hardware::CPU.arm?
       bin.install "generate-server-config", "git-ssh", "git_remote_nostr", "gnostr", "gnostr-blockhash",
-"gnostr-blockheight", "gnostr-genssh", "gnostr-kvs", "gnostr-legit", "gnostr-query", "gnostr-sha256", "gnostr-weeble", "gnostr-wobble", "server-toml"
+"gnostr-blockheight", "gnostr-genssh", "gnostr-kvs", "gnostr-legit", "gnostr-query", "gnostr-sha256", "gnostr-weeble", "gnostr-wobble", "screenshot", "server-toml"
     end
     if OS.mac? && Hardware::CPU.intel?
       bin.install "generate-server-config", "git-ssh", "git_remote_nostr", "gnostr", "gnostr-blockhash",
-"gnostr-blockheight", "gnostr-genssh", "gnostr-kvs", "gnostr-legit", "gnostr-query", "gnostr-sha256", "gnostr-weeble", "gnostr-wobble", "server-toml"
+"gnostr-blockheight", "gnostr-genssh", "gnostr-kvs", "gnostr-legit", "gnostr-query", "gnostr-sha256", "gnostr-weeble", "gnostr-wobble", "screenshot", "server-toml"
     end
     if OS.linux? && Hardware::CPU.intel?
       bin.install "generate-server-config", "git-ssh", "git_remote_nostr", "gnostr", "gnostr-blockhash",
-"gnostr-blockheight", "gnostr-genssh", "gnostr-kvs", "gnostr-legit", "gnostr-query", "gnostr-sha256", "gnostr-weeble", "gnostr-wobble", "server-toml"
+"gnostr-blockheight", "gnostr-genssh", "gnostr-kvs", "gnostr-legit", "gnostr-query", "gnostr-sha256", "gnostr-weeble", "gnostr-wobble", "screenshot", "server-toml"
     end
 
     install_binary_aliases!
