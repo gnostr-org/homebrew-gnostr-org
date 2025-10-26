@@ -1,20 +1,20 @@
 class Gnostr < Formula
   desc "gnostr:a git+nostr workflow utility"
   homepage "https://github.com/gnostr-org/gnostr"
-  version "0.0.124"
+  version "0.0.125"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.124/gnostr-aarch64-apple-darwin.tar.xz"
-      sha256 "fbb712c1453effac0efb66ddc7d0bcb5b16593f1bcf4c3845a73628ffdeb8e52"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.125/gnostr-aarch64-apple-darwin.tar.xz"
+      sha256 "c46653e205f49910425fea06098a962f38f740e14f648657f45517ee990e46ea"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.124/gnostr-x86_64-apple-darwin.tar.xz"
-      sha256 "7965d9ccd31a067657b589e7dc859d27634c25a0476141cf17de606864b8c789"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.125/gnostr-x86_64-apple-darwin.tar.xz"
+      sha256 "82b5adda46191259c3bb229c4d6901a5a5797473c6a5a44436936b5650198483"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.124/gnostr-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "d9a3944344189b13119d47bc4510c6d755e53ce39a9a38ed6d71771942878f66"
+    url "https://github.com/gnostr-org/gnostr/releases/download/v0.0.125/gnostr-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "e86e3725b3eb642ba4aef8fe5b7d9d0e2f7610e147d29272735100e11afe65f0"
   end
   license "MIT"
 
@@ -44,16 +44,16 @@ class Gnostr < Formula
 
   def install
     if OS.mac? && Hardware::CPU.arm?
-      bin.install "git-ssh", "git_remote_nostr", "gnostr", "gnostr-blockhash", "gnostr-blockheight", "gnostr-cube",
-"gnostr-genssh", "gnostr-kvs", "gnostr-legit", "gnostr-query", "gnostr-relay", "gnostr-sha256", "gnostr-sniper", "gnostr-weeble", "gnostr-wobble", "screenshot", "server-toml"
+      bin.install "generate-server-config", "git_remote_nostr", "gnostr", "gnostr-blockhash", "gnostr-blockheight",
+"gnostr-cube", "gnostr-genssh", "gnostr-kvs", "gnostr-legit", "gnostr-query", "gnostr-relay", "gnostr-sha256", "gnostr-sniper", "gnostr-weeble", "gnostr-wobble", "screenshot", "server-toml"
     end
     if OS.mac? && Hardware::CPU.intel?
-      bin.install "git-ssh", "git_remote_nostr", "gnostr", "gnostr-blockhash", "gnostr-blockheight", "gnostr-cube",
-"gnostr-genssh", "gnostr-kvs", "gnostr-legit", "gnostr-query", "gnostr-relay", "gnostr-sha256", "gnostr-sniper", "gnostr-weeble", "gnostr-wobble", "screenshot", "server-toml"
+      bin.install "generate-server-config", "git_remote_nostr", "gnostr", "gnostr-blockhash", "gnostr-blockheight",
+"gnostr-cube", "gnostr-genssh", "gnostr-kvs", "gnostr-legit", "gnostr-query", "gnostr-relay", "gnostr-sha256", "gnostr-sniper", "gnostr-weeble", "gnostr-wobble", "screenshot", "server-toml"
     end
     if OS.linux? && Hardware::CPU.intel?
-      bin.install "git-ssh", "git_remote_nostr", "gnostr", "gnostr-blockhash", "gnostr-blockheight", "gnostr-cube",
-"gnostr-genssh", "gnostr-kvs", "gnostr-legit", "gnostr-query", "gnostr-relay", "gnostr-sha256", "gnostr-sniper", "gnostr-weeble", "gnostr-wobble", "screenshot", "server-toml"
+      bin.install "generate-server-config", "git_remote_nostr", "gnostr", "gnostr-blockhash", "gnostr-blockheight",
+"gnostr-cube", "gnostr-genssh", "gnostr-kvs", "gnostr-legit", "gnostr-query", "gnostr-relay", "gnostr-sha256", "gnostr-sniper", "gnostr-weeble", "gnostr-wobble", "screenshot", "server-toml"
     end
 
     install_binary_aliases!
