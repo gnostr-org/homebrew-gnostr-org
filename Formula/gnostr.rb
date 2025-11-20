@@ -1,20 +1,20 @@
 class Gnostr < Formula
   desc "gnostr:a git+nostr workflow utility"
   homepage "https://github.com/gnostr-org/gnostr"
-  version "1912.921034.558464"
+  version "1907.924459.723348"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/gnostr/releases/download/1912.921034.558464/gnostr-aarch64-apple-darwin.tar.xz"
-      sha256 "a4970c8b630ce137e314a0d5b9448578eddb33bb8bcb9ec14ca6c5928a7d34cf"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v1907.924459.723348/gnostr-aarch64-apple-darwin.tar.xz"
+      sha256 "92f035d74aeb853ba7e0e50f47812280ac64db66be89215f6ef749e26c5be9e0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/gnostr/releases/download/1912.921034.558464/gnostr-x86_64-apple-darwin.tar.xz"
-      sha256 "b703f89c7020bbe7c749b293f1f94e7c00b5ce5af61885979b93ce227afd987c"
+      url "https://github.com/gnostr-org/gnostr/releases/download/v1907.924459.723348/gnostr-x86_64-apple-darwin.tar.xz"
+      sha256 "cf2ee3a670199ca65878b512e9f7f403d90f4c8db1a2dc7f0205e4d93579fa63"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/gnostr-org/gnostr/releases/download/1912.921034.558464/gnostr-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "9687351d7c633bff8f47502fbefd980d05651b118b20c40298f54d94da2b1675"
+    url "https://github.com/gnostr-org/gnostr/releases/download/v1907.924459.723348/gnostr-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "e2d02b212ffd8ef973ee0a917e6a937bf5b1430a8e2b5b9ea60dd09deca72823"
   end
   license "MIT"
 
@@ -44,16 +44,16 @@ class Gnostr < Formula
 
   def install
     if OS.mac? && Hardware::CPU.arm?
-      bin.install "generate-server-config", "git_remote_nostr", "gnostr", "gnostr-blockhash", "gnostr-blockheight",
-"gnostr-cube", "gnostr-genssh", "gnostr-git-checkout-b", "gnostr-git-checkout-pr", "gnostr-git-tag", "gnostr-git-tag-pr", "gnostr-git-tag-version", "gnostr-kvs", "gnostr-legit", "gnostr-query", "gnostr-relay", "gnostr-sha256", "gnostr-sniper", "gnostr-weeble", "gnostr-wobble", "screenshot", "server-toml"
+      bin.install "generate-server-config", "git-checkout-b", "git-checkout-pr", "git-remote-nostr", "git-tag",
+"git-tag-pr", "git-tag-version", "gnostr", "gnostr-blockhash", "gnostr-blockheight", "gnostr-genssh", "gnostr-kvs", "gnostr-legit", "gnostr-query", "gnostr-sha256", "gnostr-sniper", "gnostr-weeble", "gnostr-wobble", "screenshot", "server-toml"
     end
     if OS.mac? && Hardware::CPU.intel?
-      bin.install "generate-server-config", "git_remote_nostr", "gnostr", "gnostr-blockhash", "gnostr-blockheight",
-"gnostr-cube", "gnostr-genssh", "gnostr-git-checkout-b", "gnostr-git-checkout-pr", "gnostr-git-tag", "gnostr-git-tag-pr", "gnostr-git-tag-version", "gnostr-kvs", "gnostr-legit", "gnostr-query", "gnostr-relay", "gnostr-sha256", "gnostr-sniper", "gnostr-weeble", "gnostr-wobble", "screenshot", "server-toml"
+      bin.install "generate-server-config", "git-checkout-b", "git-checkout-pr", "git-remote-nostr", "git-tag",
+"git-tag-pr", "git-tag-version", "gnostr", "gnostr-blockhash", "gnostr-blockheight", "gnostr-genssh", "gnostr-kvs", "gnostr-legit", "gnostr-query", "gnostr-sha256", "gnostr-sniper", "gnostr-weeble", "gnostr-wobble", "screenshot", "server-toml"
     end
     if OS.linux? && Hardware::CPU.intel?
-      bin.install "generate-server-config", "git_remote_nostr", "gnostr", "gnostr-blockhash", "gnostr-blockheight",
-"gnostr-cube", "gnostr-genssh", "gnostr-git-checkout-b", "gnostr-git-checkout-pr", "gnostr-git-tag", "gnostr-git-tag-pr", "gnostr-git-tag-version", "gnostr-kvs", "gnostr-legit", "gnostr-query", "gnostr-relay", "gnostr-sha256", "gnostr-sniper", "gnostr-weeble", "gnostr-wobble", "screenshot", "server-toml"
+      bin.install "generate-server-config", "git-checkout-b", "git-checkout-pr", "git-remote-nostr", "git-tag",
+"git-tag-pr", "git-tag-version", "gnostr", "gnostr-blockhash", "gnostr-blockheight", "gnostr-genssh", "gnostr-kvs", "gnostr-legit", "gnostr-query", "gnostr-sha256", "gnostr-sniper", "gnostr-weeble", "gnostr-wobble", "screenshot", "server-toml"
     end
 
     install_binary_aliases!
