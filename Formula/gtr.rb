@@ -1,25 +1,25 @@
 class Gtr < Formula
   desc "rust implementation of gittorrent"
   homepage "https://github.com/RandyMcMillan/gtr"
-  version "0.0.9"
+  version "0.0.10"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/RandyMcMillan/gtr/releases/download/v0.0.9/gtr-aarch64-apple-darwin.tar.xz"
-      sha256 "c5025de387096e5807781475458866d39f0150dd29a374770f3b19bdb03019a7"
+      url "https://github.com/RandyMcMillan/gtr/releases/download/v0.0.10/gtr-aarch64-apple-darwin.tar.xz"
+      sha256 "b61e461c3ccd8820c169e7c1235ce147fec9cbfdb10beeec85ad59a2347ecac5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/RandyMcMillan/gtr/releases/download/v0.0.9/gtr-x86_64-apple-darwin.tar.xz"
-      sha256 "6bdb1ed93b8a22cc8d21ee8f6b6d94795466b2bd1b2fff7ec90af731ea45d806"
+      url "https://github.com/RandyMcMillan/gtr/releases/download/v0.0.10/gtr-x86_64-apple-darwin.tar.xz"
+      sha256 "0ca0b744663d2dd14a1973a8fbccb1fe41739b7fd84a70cef3426c68a761fd89"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/RandyMcMillan/gtr/releases/download/v0.0.9/gtr-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "df322eaacb59dc38b7d935c2bf1c4950164622d0771f60e9af6556ae5aa5d555"
+      url "https://github.com/RandyMcMillan/gtr/releases/download/v0.0.10/gtr-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "ef45d0b109a734a213421b08e59a629606e4d25ef1c6da43b19109929e1b0112"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/RandyMcMillan/gtr/releases/download/v0.0.9/gtr-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "2862b0aa5ecb3c9f7200060a3d3e0282a7abbae42500a888bd7ba79d186d2c8a"
+      url "https://github.com/RandyMcMillan/gtr/releases/download/v0.0.10/gtr-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "4f8bb34398b8b7317fbbb02106f6f4b6e2ab11287d03baa1346fcd659a3309a7"
     end
   end
 
