@@ -1,27 +1,28 @@
 class GetFileHash < Formula
   desc "A utility crate providing a procedural macro to compute and embed file hashes at compile time."
   homepage "https://github.com/gnostr-org/get_file_hash"
-  version "0.3.1"
+  version "0.3.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.3.1/get_file_hash-aarch64-apple-darwin.tar.xz"
-      sha256 "2ac106a31cad0411c170914cb9653a616c6aff4ae0aad25bb1293296ba42d258"
+      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.3.2/get_file_hash-aarch64-apple-darwin.tar.xz"
+      sha256 "062fc72911455f124182c0c6fdd12abca04e00f87ac5f12e27689142590cbb27"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.3.1/get_file_hash-x86_64-apple-darwin.tar.xz"
-      sha256 "600c9cd4352513c73f6b677335cafbf59007971f093e109b92fa5390f4ce3658"
+      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.3.2/get_file_hash-x86_64-apple-darwin.tar.xz"
+      sha256 "833fd64013de75713b36e7902723b91571e34b66d2c86f82e6b9fd4b462ba895"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.3.1/get_file_hash-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "acbbb2b0b13e5a03fe4976a7fd863c00e124c7882911da811bc498a56ec0e54e"
+      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.3.2/get_file_hash-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "05509fb81e939f2bd4865faf4b6614de3188f0ad5dbe2e7df6f75c826e11a479"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.3.1/get_file_hash-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "b40a50f8eb16f4dc19ad040de6d432873c284b4551105c45eec5a3696972ae9d"
+      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.3.2/get_file_hash-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "cfed4267d79c5bde2485cfc2b3fe0c612ab20e5bb4bb315c02ae945e136cfdea"
     end
   end
+  license "MIT"
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":              {},
