@@ -1,25 +1,25 @@
 class GetFileHash < Formula
   desc "A utility crate providing a procedural macro to compute and embed file hashes at compile time."
   homepage "https://github.com/gnostr-org/get_file_hash"
-  version "0.2.8"
+  version "0.2.9"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.2.8/get_file_hash-aarch64-apple-darwin.tar.xz"
-      sha256 "2acb68221078ef8bf002b313479b3c04a9c0ac0fccbbf2304288da2b75edc8be"
+      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.2.9/get_file_hash-aarch64-apple-darwin.tar.xz"
+      sha256 "6fb5f6df359da74e140f77d95b8f96a8f6c49f73a5352acbbaf352054ae32fb6"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.2.8/get_file_hash-x86_64-apple-darwin.tar.xz"
-      sha256 "177e3534ea929a062d7b8a23776b09c02ac128620a1849ed7dc6e072f9e0b52b"
+      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.2.9/get_file_hash-x86_64-apple-darwin.tar.xz"
+      sha256 "c91c00ef7b2abbb5f07ca107fa893ea861d68844a448b6cf80ea3f0fc781d4b3"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.2.8/get_file_hash-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "e5e193d2d661169462e2d7d46fca858d152497815306f1f671676da29d7e215c"
+      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.2.9/get_file_hash-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "86ad2994bffb4d3ddd526bace44a72940917de7ff5ececa30de9a3976a2610f2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.2.8/get_file_hash-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "c6d6d30f69129fd2b5cc5e469a7cd919812e78bb15903a93e754211c2557e0f3"
+      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.2.9/get_file_hash-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "f6ae7ca332f2f14f8bf032a3000d6d857efffb2afc8d9d5b69311f5eeefc6544"
     end
   end
 
