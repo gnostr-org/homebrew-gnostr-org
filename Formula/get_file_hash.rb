@@ -1,25 +1,25 @@
 class GetFileHash < Formula
   desc "A utility crate providing a procedural macro to compute and embed file hashes at compile time."
   homepage "https://github.com/gnostr-org/get_file_hash"
-  version "0.2.6"
+  version "0.2.8"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.2.6/get_file_hash-aarch64-apple-darwin.tar.xz"
-      sha256 "2b05302f9cce71b90c36c78bb1bc850f4cef809f6a6fc010e8effcddb3853d5f"
+      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.2.8/get_file_hash-aarch64-apple-darwin.tar.xz"
+      sha256 "2acb68221078ef8bf002b313479b3c04a9c0ac0fccbbf2304288da2b75edc8be"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.2.6/get_file_hash-x86_64-apple-darwin.tar.xz"
-      sha256 "07f4df1a55cec7e8c35dce8b0850d62c5f5ab4ea7ddc43b62f3b63fadad33190"
+      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.2.8/get_file_hash-x86_64-apple-darwin.tar.xz"
+      sha256 "177e3534ea929a062d7b8a23776b09c02ac128620a1849ed7dc6e072f9e0b52b"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.2.6/get_file_hash-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "3ffb7d71a191f7301752e4c1b0576944cd821ea55d71ec46e97b851b099001d7"
+      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.2.8/get_file_hash-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "e5e193d2d661169462e2d7d46fca858d152497815306f1f671676da29d7e215c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.2.6/get_file_hash-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "47ce0b2b7384dcf172481a20f39c6fecd722eba8e3b19a68184ef1132de63d62"
+      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.2.8/get_file_hash-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "c6d6d30f69129fd2b5cc5e469a7cd919812e78bb15903a93e754211c2557e0f3"
     end
   end
 
