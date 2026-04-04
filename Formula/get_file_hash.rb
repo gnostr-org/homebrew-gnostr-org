@@ -1,25 +1,25 @@
 class GetFileHash < Formula
   desc "A utility crate providing a procedural macro to compute and embed file hashes at compile time."
   homepage "https://github.com/gnostr-org/get_file_hash"
-  version "0.3.2"
+  version "0.3.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.3.2/get_file_hash-aarch64-apple-darwin.tar.xz"
-      sha256 "062fc72911455f124182c0c6fdd12abca04e00f87ac5f12e27689142590cbb27"
+      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.3.3/get_file_hash-aarch64-apple-darwin.tar.xz"
+      sha256 "22951d34969d899a756752498b52f180a68d27146bea8b4c82a8a55ef797adfb"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.3.2/get_file_hash-x86_64-apple-darwin.tar.xz"
-      sha256 "833fd64013de75713b36e7902723b91571e34b66d2c86f82e6b9fd4b462ba895"
+      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.3.3/get_file_hash-x86_64-apple-darwin.tar.xz"
+      sha256 "000cc7c4b47f1a8e3cbc3d8420c519ab4b85f71f1a28226e89ab8a6a77aa9115"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.3.2/get_file_hash-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "05509fb81e939f2bd4865faf4b6614de3188f0ad5dbe2e7df6f75c826e11a479"
+      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.3.3/get_file_hash-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "ac60a8cd11cd2378e8642d7dfbcd33e7e376dd7d17787776c112c95b2eaf0e21"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.3.2/get_file_hash-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "cfed4267d79c5bde2485cfc2b3fe0c612ab20e5bb4bb315c02ae945e136cfdea"
+      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.3.3/get_file_hash-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "9edfdf2ec2fccf05b6ef5bbafc46fef70f055081f440b5dd33c8c80bf8eb34fd"
     end
   end
   license "MIT"
