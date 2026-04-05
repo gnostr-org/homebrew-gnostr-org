@@ -1,20 +1,20 @@
 class GetFileHash < Formula
   desc "A utility crate providing a procedural macro to compute and embed file hashes at compile time."
   homepage "https://github.com/gnostr-org/get_file_hash"
-  version "0.4.5"
+  version "0.4.6"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.4.5/get_file_hash-aarch64-apple-darwin.tar.xz"
-      sha256 "7e55c79cd5552f13ba3fd051926d574f3cb17d4f55a8283805c1693ce26c72d7"
+      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.4.6/get_file_hash-aarch64-apple-darwin.tar.xz"
+      sha256 "9498e0cb6c5f148f5e5985c54ce9d72939b4630557059b3107cbd900b09013a8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.4.5/get_file_hash-x86_64-apple-darwin.tar.xz"
-      sha256 "c2d9d2ce9e32ec2b91cef02ad9eb28f46a5b7c61efa58d2050cd04b1b3e0d31d"
+      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.4.6/get_file_hash-x86_64-apple-darwin.tar.xz"
+      sha256 "2bc8173952874c94e4bc915159d25ed0c30211a0733ab7badf3340bd5d50d926"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.4.5/get_file_hash-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "14faff1d7af633977617b0cddeb84b293cf0ec9d467a4bc8d822227353c09005"
+    url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.4.6/get_file_hash-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "fc95d853d39c7365dfba85873f1bc8372e5b221289eb1b59fe1603197b3e4fa8"
   end
   license "MIT"
 
