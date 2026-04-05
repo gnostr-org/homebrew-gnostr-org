@@ -1,37 +1,28 @@
 class GetFileHash < Formula
   desc "A utility crate providing a procedural macro to compute and embed file hashes at compile time."
   homepage "https://github.com/gnostr-org/get_file_hash"
-  version "0.3.3"
+  version "0.4.5"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.3.3/get_file_hash-aarch64-apple-darwin.tar.xz"
-      sha256 "22951d34969d899a756752498b52f180a68d27146bea8b4c82a8a55ef797adfb"
+      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.4.5/get_file_hash-aarch64-apple-darwin.tar.xz"
+      sha256 "7e55c79cd5552f13ba3fd051926d574f3cb17d4f55a8283805c1693ce26c72d7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.3.3/get_file_hash-x86_64-apple-darwin.tar.xz"
-      sha256 "000cc7c4b47f1a8e3cbc3d8420c519ab4b85f71f1a28226e89ab8a6a77aa9115"
+      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.4.5/get_file_hash-x86_64-apple-darwin.tar.xz"
+      sha256 "c2d9d2ce9e32ec2b91cef02ad9eb28f46a5b7c61efa58d2050cd04b1b3e0d31d"
     end
   end
-  if OS.linux?
-    if Hardware::CPU.arm?
-      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.3.3/get_file_hash-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "ac60a8cd11cd2378e8642d7dfbcd33e7e376dd7d17787776c112c95b2eaf0e21"
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.3.3/get_file_hash-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "9edfdf2ec2fccf05b6ef5bbafc46fef70f055081f440b5dd33c8c80bf8eb34fd"
-    end
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/gnostr-org/get_file_hash/releases/download/v0.4.5/get_file_hash-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "14faff1d7af633977617b0cddeb84b293cf0ec9d467a4bc8d822227353c09005"
   end
   license "MIT"
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin":              {},
-    "aarch64-unknown-linux-gnu":         {},
-    "x86_64-apple-darwin":               {},
-    "x86_64-pc-windows-gnu":             {},
-    "x86_64-unknown-linux-gnu":          {},
-    "x86_64-unknown-linux-musl-dynamic": {},
-    "x86_64-unknown-linux-musl-static":  {},
+    "aarch64-apple-darwin":     {},
+    "x86_64-apple-darwin":      {},
+    "x86_64-pc-windows-gnu":    {},
+    "x86_64-unknown-linux-gnu": {},
   }.freeze
 
   def target_triple
@@ -50,10 +41,9 @@ class GetFileHash < Formula
   end
 
   def install
-    bin.install "get_file_hash", "readme" if OS.mac? && Hardware::CPU.arm?
-    bin.install "get_file_hash", "readme" if OS.mac? && Hardware::CPU.intel?
-    bin.install "get_file_hash", "readme" if OS.linux? && Hardware::CPU.arm?
-    bin.install "get_file_hash", "readme" if OS.linux? && Hardware::CPU.intel?
+    bin.install "get_file_hash", "n34", "n34-relay", "readme" if OS.mac? && Hardware::CPU.arm?
+    bin.install "get_file_hash", "n34", "n34-relay", "readme" if OS.mac? && Hardware::CPU.intel?
+    bin.install "get_file_hash", "n34", "n34-relay", "readme" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
 
