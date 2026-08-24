@@ -18,7 +18,7 @@ class GnostrGit < Formula
       sha256 "76482b7ad8a0fb6af7212b1d465f04e5976299b09d7849f4b6d5d1156a7fffe5"
     end
   end
-  license "MIT OR Apache-2.0"
+  license any_of: ["MIT", "Apache-2.0"]
 
   BINARY_ALIASES = {"aarch64-apple-darwin": {}, "x86_64-apple-darwin": {}, "x86_64-pc-windows-gnu": {}, "x86_64-unknown-linux-gnu": {}, "x86_64-unknown-linux-musl-dynamic": {}, "x86_64-unknown-linux-musl-static": {}}
 
